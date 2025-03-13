@@ -1,0 +1,78 @@
+---
+title: "Data cleaning_ Stigmatization of homeless individuals "
+output: html_document
+---
+
+```{r}
+write.csv(SPSS_File_for_Experimental_Study_Karen, "Experimental_Study_Karen.csv", row.names = FALSE) # changed the original data file from SPSS to CSV file to clean the data. I only had acess to the data via SPSS as this was the only programming that I did through my undergraduate experience. 
+
+```
+
+```{r}
+# read in data to look at what need to be cleaned 
+stigmatization_data <- read.csv("Experimental_Study_Karen.csv") # i left the label this ways so that the final clean data that i actually use in my analisis will have a better name. 
+head(stigmatization_data)  # Shows the first 6 rows
+str(stigmatization_data)   # Shows the structure of the data
+colnames(stigmatization_data)  # Lists all column names
+#Make a column with particpant ID, change race column be more spacific so that it is clear that that the race is not about the particpants but rather the race of the homeless individual in the vignettes of this study . 
+
+```
+
+```{r}
+# Check for missing values
+sum(is.na(stigmatization_data))
+
+# see missing data per column
+colSums(is.na(stigmatization_data))
+
+```
+
+```{r}
+# removing missing items. There was a good of missing items to not mess with outcomes i will have them remove although I could have been be replace by the mean 
+stigmatization_data <- na.omit(stigmatization_data)
+```
+
+```{r}
+# check for any duplicates
+duplicated(stigmatization_data)
+
+# Remove duplicates
+stigmatization_data <- stigmatization_data[!duplicated(stigmatization_data), ]
+
+```
+
+```{r}
+#changed data to correct data types. I noticed that there was quite a bot of work to do with this section as the data was not in the correct format.
+# Check the structure of the data
+str(stigmatization_data)
+
+# Convert appropriate columns to factors (e.g., 'gender', 'ethnicity')
+stigmatization_data$gender <- as.factor(stigmatization_data$gender)
+stigmatization_data$ethnicity <- as.factor(stigmatization_data$ethnicity)
+stigmatization_data$condition <- as.factor(stigmatization_data$condition)
+stigmatization_data$community <- as.factor(stigmatization_data$community)
+stigmatization_data$political_affiliation <- as.factor(stigmatization_data$political_affiliation)
+
+# Check data types again
+str(stigmatization_data)
+
+```
+
+```{r}
+# numerical columns (example: age, Distance_mean)
+stigmatization_data$age <- scale(stigmatization_data$age)
+stigmatization_data$Distance_mean <- scale(stigmatization_data$Distance_mean)
+
+```
+
+```{r}
+write.csv(stigmatization_data, "C:/Users/karen/OneDrive/Documents/KARENBECERRAFINALPROJECT/STIGMA-KV/cleaned_data.csv", row.names = FALSE)
+
+```
+
+
+
+
+
+
+
