@@ -4,7 +4,7 @@ output: html_document
 ---
 
 ```{r}
-write.csv(SPSS_File_for_Experimental_Study_Karen, "Experimental_Study_Karen.csv", row.names = FALSE) # changed the original data file from SPSS to CSV file to clean the data. I only had acess to the data via SPSS as this was the only programing that I did through my undergraduate experince. 
+write.csv(SPSS_File_for_Experimental_Study_Karen, "Experimental_Study_Karen.csv", row.names = FALSE) # changed the original data file from SPSS to CSV file to clean the data. I only had acess to the data via SPSS as this was the only programming that I did through my undergraduate experience. 
 
 ```
 
@@ -17,4 +17,3 @@ colnames(stigmatization_data)  # Lists all column names
 #Make a column with particpant ID, change race column be more spacific so that it is clear that that the race is not about the particpants but rather the race of the homeless individual in the vignettes of this study . 
 
 ```
-
