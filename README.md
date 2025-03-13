@@ -8,14 +8,14 @@ This Project will be use to write up the results of a project that I conducted i
 
 # Directory Overview
 # data/
-Contains all data-related files, including the original dataset, cleaned data, and cleaning scripts.
+Contains all data-related files, including the original data set, cleaned data, and cleaning scripts.
 
 
 Data_cleaning_1st_round_Stigmatization_of_homeless_individuals.Rmd: The first round of data cleaning that creates the cleaned_data.csv file.
 
 Data_Cleaning_2.Rmd: The second round of data cleaning, which results in the final_cleaned_data.csv file. This file includes additional objectives not covered in the main QMD.
 
-Final_Data_cleaning.Rmd: The final round of data cleaning for the project.
+Final Data leaning.Rmd: Is the file that has the most code and the place where most of the objectives were meet. This file has data cleaning, plotting and additional test that go along with the other hypothesis for this paper but that I could not refine them enough to include in the qmd. 
 
 Experimental_Study_Karen.csv: The original (uncleaned) data file for the study.
 
