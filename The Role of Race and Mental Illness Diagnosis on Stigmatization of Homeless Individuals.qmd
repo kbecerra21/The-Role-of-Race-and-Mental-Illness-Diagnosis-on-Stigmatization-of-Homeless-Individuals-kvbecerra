@@ -144,6 +144,7 @@ Demographics questionnaire that asked participants about their age, ethnicity, r
 
 # Results
 
+
 ```{r}
 #| label: anova-analysis
 #| echo: true
@@ -184,10 +185,10 @@ ggplot(data, aes(x = diagnosis, y = mean_stigma, fill = diagnosis)) +
   theme_minimal(base_size = 10)
 ```
 ## Main effects of race and diagnosis on social interaction
-Figure 1 shows the effect of mental illness diagnosis on social distance stigma. The mean stigma scores for each diagnosis are as follows:
 
+Figure 1 shows the effect of mental illness diagnosis on social distance stigma. The mean stigma scores for each diagnosis are as follows: 
 - **No Diagnosis**: `r data$mean_stigma[1]` (SD = `r data$sd_stigma[1]`)
-- **Schizophrenia**: `r data$mean_stigma[2]` (SD = `r data$sd_stigma[2]`)
+- **Schizophrenia**: `r data$mean_stigma[2]` (SD = `r data$sd_stigma[2]`) 
 - **Substance Use Disorder**: `r data$mean_stigma[3]` (SD = `r data$sd_stigma[3]`)
 
 The results indicate that individuals with schizophrenia (M = `r data$mean_stigma[2]`) and substance use disorder (M = `r data$mean_stigma[3]`) experience higher levels of social distance stigma compared to those with no diagnosis (M = `r data$mean_stigma[1]`). However, these differences were not statistically significant.
