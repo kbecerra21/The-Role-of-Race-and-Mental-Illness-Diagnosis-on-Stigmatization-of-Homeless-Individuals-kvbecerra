@@ -117,7 +117,7 @@ Building on the research by @corriganPublicStigmaMental2009, @markowitzRaceGende
 
 ## Participants
 
-The sample for this study consisted of 215 participants, primarily college-aged students in the United States, with ages ranging from The ages of the sample ranged from 18 to 79 (M = `r round(35.08, 2)`, SD = `r round(16.33, 2)`).The sample was 44.7% White, 13% Hispanic, 33% Black, 4.2% Asian American, 3.3% Biracial, and 1.9% other ethnicities. The sample identified politically as 52.6% Liberal, 37.1% Moderate, and 10.3% Conservative.The sample was broken down into 1.9% living in a rural community, 58.6% living in the suburbs, 12.1% living in a small town, and 27.4% living in a large metropolitan city. Finally, the distribution of gender was as follows: 29.3% male, 68.8% female, and 1.9% other responses. Table 1 provides a summary of the demographic characteristics of the sample.
+The sample for this study consisted of 215 participants, primarily college-aged students in the United States, with ages ranging from The ages of the sample ranged from 18 to 79 (M = `r round(35.08, 2)`, SD = `r round(16.33, 2)`).The sample was 44.7% White, 13% Hispanic, 33% Black, 4.2% Asian American, 3.3% Biracial, and 1.9% other ethnicities. The sample identified politically as 52.6% Liberal, 37.1% Moderate, and 10.3% Conservative.The sample was broken down into 1.9% living in a rural community, 58.6% living in the suburbs, 12.1% living in a small town, and 27.4% living in a large metropolitan city. Finally, the distribution of gender was as follows: 29.3% male, 68.8% female, and 1.9% other responses. **Table 1.** provides a summary of the demographic characteristics of the sample.
 
 ### Table 1
 Demographic Information of Participants
@@ -149,7 +149,7 @@ Demographic Information of Participants
 <p style="text-align: center; font-style: italic;">**Note**: Percentages may not sum to 100 due to rounding.</p>
 
 ## Measures
-This study used multiple questionnaires to examine the effects and interactions of race and mental illness on stigmatization toward homeless individuals. Participants were assigned to one of six experimental conditions using vignettes adapted from @markowitzRaceGenderHomelessness2021, manipulating race and mental illness. Table 2 presents the vignettes used in this study. 
+This study used multiple questionnaires to examine the effects and interactions of race and mental illness on stigmatization toward homeless individuals. Participants were assigned to one of six experimental conditions using vignettes adapted from @markowitzRaceGenderHomelessness2021, manipulating race and mental illness. **Table 2.** presents the vignettes used in this study. 
 
 ### Table 2
 Vignettes Used in the Study
@@ -176,7 +176,9 @@ A Memory Check assessed participants' recall of story details, specifically the 
 Demographics questionnaire that asked participants about their age, ethnicity, residence, political affiliation, and familiarity with homelessness.
 
 # Results
-## MAin Effect of Diagnosis on Social Distance Stigma
+## Descriptive Statistics
+
+## Main Effect of Diagnosis on Social Distance Stigma
 
 ```{r}
 #| label: anova-analysis
