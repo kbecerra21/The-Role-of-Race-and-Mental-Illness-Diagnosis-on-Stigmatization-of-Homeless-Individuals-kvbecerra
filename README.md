@@ -15,7 +15,7 @@ Data_cleaning_1st_round_Stigmatization_of_homeless_individuals.Rmd: The first ro
 
 Data_Cleaning_2.Rmd: The second round of data cleaning, which results in the final_cleaned_data.csv file. This file includes additional objectives not covered in the main QMD.
 
-Final Data leaning.Rmd: Is the file that has the most code and the place where most of the objectives were meet. This file has data cleaning, plotting and additional test that go along with the other hypothesis for this paper but that I could not refine them enough to include in the qmd. 
+Final Data leaning.Rmd: Is the file that has the most code and the place where most of the objectives were meet. This file has data cleaning, plotting and additional test that go along with the other hypothesis for this paper that I could not refine  quick enough to include in the qmd. 
 
 Experimental_Study_Karen.csv: The original (uncleaned) data file for the study.
 
