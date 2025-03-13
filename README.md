@@ -28,3 +28,35 @@ Data_Stigmatization_of_HomelessIndividuals/
 │── The-Role-of-Race-and-Mental-Illness-Diagnosis-on-Stigmatization-of-Homeless-Individuals.tex  # Assessment MD and PDF test (LaTeX)
 │── research-assessment.md                         # Assessment.md with all objectives for this project 
 
+# Directory Overview
+data/
+Contains all data-related files, including the original dataset, cleaned data, and cleaning scripts.
+
+cleaning_Stigmatization_of_homeless_individuals.Rmd: The main file for data cleaning in this study, containing all the cleaning code.
+Data_cleaning_1st_round_Stigmatization_of_homeless_individuals.Rmd: The first round of data cleaning that creates the cleaned_data.csv file.
+Data_Cleaning_2.Rmd: The second round of data cleaning, which results in the final_cleaned_data.csv file. This file includes additional objectives not covered in the main QMD.
+Final_Data_cleaning.Rmd: The final round of data cleaning for the project.
+Experimental_Study_Karen.csv: The original (uncleaned) data file for the study.
+SPSS_File_for_Experimental_Study_Karen.sav: The original SPSS file for the study, uncleaned.
+_extensions/wjschne/apaquarto/
+Contains the APA extension for Quarto to format the final report according to APA style.
+
+Stigmatization.bib
+Bibliography file containing all references for the study.
+
+all-example-files/
+Includes all sample documents provided by the extension.
+
+.gitignore
+Git ignore file to exclude unnecessary files from version control.
+
+README.md
+This README file that provides an overview of the repository and project.
+
+testing files/
+Contains testing files used to verify the rendering of PDFs and other outputs.
+
+The_Role_of_Race_and_Mental_Illness_Diagnosis_on_Stigmatization_of_Homeless_Individuals.qmd: The Quarto markdown file for the final project report.
+The-Role-of-Race-and-Mental-Illness-Diagnosis-on-Stigmatization-of-Homeless-Individuals.pdf: The generated PDF version of the final project report.
+The-Role-of-Race-and-Mental-Illness-Diagnosis-on-Stigmatization-of-Homeless-Individuals.tex: LaTeX version of the final report (for PDF test).
+research-assessment.md: A markdown file that documents the assessment objectives for the project.
