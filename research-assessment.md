@@ -99,7 +99,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2.  Uses relative paths correctly
     3.  Does not have duplicate/redundant elements
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments: 
 
@@ -108,7 +108,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1.  Includes description of repo purpose, data use, research questions, etc.
     2.  Outlines the repo structure with file tree or similar
 
-        -   [ ] Objective attempt
+        -   [x ] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -117,7 +117,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1.  All scripts run and all notebooks render if the repo is cloned to another location
     2.  .gitingore comprehensively excludes unnecessary, private, and very large files and are commented appropriately
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -126,7 +126,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1.  Used frequent, informative commit messages
     2.  Relies on document revisions rather than manually created new versions
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -139,7 +139,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
         2. When a reader opts-in to installing packages by uncommenting the code, it runs without errors 
     2. Uses more than one function to install/load/require packages (including those used in commented code)
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         
@@ -296,7 +296,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Uses at least 2 citation forms (e.g., (Author, Year), Author (Year), etc.)
     3. May use `cite_r()` to cite R and R packages
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -308,7 +308,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     4. May include R and R package citations with `cite_r()`
     5. May include references not cited in-text
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -321,7 +321,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3.  Follows the "1-chunk-1-thing" rule
     4.  Chunks are distributed throughout the manuscript, sensibly placed near the text they support
 
-        -   [ ] Objective attempt
+        -   [x ] Objective attempt
         -   [ ] Objective met
         -   Grader comments: 
         
@@ -332,7 +332,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3. Sets preferences/options in at least 1 code chunk
     4. Organizes setup chunks sensibly
 
-        -   [ ] Objective attempt
+        -   [x ] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         
@@ -345,7 +345,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     5. References render without error and link to the correct table/figure in pdf/html output
     - NOTE: Ideally your table(s) should be produced in APA7 style, but this is not a strict requirement. At a minimum, they should render as formatted tables (not raw output), have readable and correctly formatted text (e.g., column headers should be capitalized and in plain english, not literal variable names), and the table must be dynamically referenced in the text.
 
-        -   [ ] Objective attempt
+        -   [x ] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -367,7 +367,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     
     1. Includes all necessary metadata, output options, and formatting options necessary to render an APA styled document (or other specified style if appropriate for the project)
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         
@@ -408,7 +408,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3. PDF renders without error and includes all text, tables, and figures
     4. No additional steps are needed (e.g., finding data, determining necessary packages to install and load, running unsourced scripts, correcting aboslute paths)
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:        
    
@@ -417,12 +417,12 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
 
 Optionally (for engagement points) write a brief reflection about your work on this project. You can use this space to answer the following questions, but feel free to ignore these questions and write about whatever you think is most important.
 
-- What was the most challenging aspect of this project?
-- What was the most rewarding aspect of this project?
-- What would you do differently if you were to start over?
-- What did you learn from this project that you will carry forward to future projects?
+- What was the most challenging aspect of this project? The most challenging part of this project was making sure that I included as much of the objectives as I could which was difficult especially in the way that the objectives were written it would have been nice to have an example to help guide my project as I am still trying to get familiar with the terms. I also had a lot of difficulty after my computer pretty much died on me as I had to pretty much start my project over as when connecting to the Lab computers i could not clone my existing repo and had to start from zero.  
+- What was the most rewarding aspect of this project? Although I had to start my project from zero i was able to create a pdf that i could send to my undergraduate professor to remind her of the results of the project that we conducted together.although it was hard to try and recreate everything that I had done having had some practice with the mini projects made it a little easier to get back to where I was. 
+- What would you do differently if you were to start over? I would make sure that i save my code in a word doc just in case another computer situation happened. I would also check more often to see if my commits are actually being pushed to the repo as I lost a lot of work that I had done. I would also like to figure out the issue with the tables as it was one of the hardest parts of the project. 
+- What did you learn from this project that you will carry forward to future projects? I really liked learning how to clean data from this project even though I had already run the data for this project in SPSS I had not realized how messy my data was and that it could be way better. I also like having the citations on Zotero this is an app that I will keep using. 
 - What are you most proud of in this project?
-
+I am most proud of the fact that I was able to create a pdf and that I was able to get my project somewhat back to where I had it before i lost pretty much the whole thing. At the beginning of the quarter I would have no idea of how to even load a repo to r studio. At the beginning of the quarter I would have not been able to do any of the things that I did for this project as I had never even open r studio before and didn't know what github was.
 
 Alternatively/additionally in mind some of the suggested ways to earn engagement points, and expand on this (or other aspects of your project) in your reflection:
 
