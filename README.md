@@ -12,6 +12,9 @@ This Project will be use to write up the results of a project that I conducted i
 Data_Stigmatization_of_HomelessIndividuals/
 │── data/                                          # Directory for data files
 │   │── cleaning_ Stigmatization of homeless individuals .Rmd # This file has all the cleaning code for this study
+│   │── Data cleaning 1st round_ Stigmatization of homeless individuals .Rmd # has the first round of data cleaning for thsi project it created cleaned_data.csv
+│   │── Data_Cleaning 2.Rmd                         # This file has the second round of data cleaning for this project it created final_cleaned_data.csv Thsi file has the obejctives taht are not on the main qmd
+│   │── Final Data cleaning. Rmd                    # This file has the final round of data cleaning for this project
 │   │── Experimental_Study_Karen.csv                # The original data file for the study not cleaned
 │   │── SPSS File for Experimental Study Karen.sav  # The original SPSS file for the study not cleaned
 │── _extensions/wjschne/apaquarto/                 # APA Extension for Quarto
