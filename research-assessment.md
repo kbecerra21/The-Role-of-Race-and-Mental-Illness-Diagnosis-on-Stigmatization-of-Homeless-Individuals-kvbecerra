@@ -24,33 +24,32 @@ To complete this assessment:
 
 ## Basic information
 
-Name:
+Name:Karen V Becerra
 
-CNetID:
+CNetID:kvbecerra
 
-Section:
+Section:2
 
-Research project title:
+Research project title:The Role of Race and Mental Illness Diagnosis on Stigmatization of Homeless Individuals
 
-Submission date:
+Submission date:03/13/25
 
-Submission number (1-4):
+Submission number (1-4):1
 
-Project GitHub repository URL:
+Project GitHub repository URL:https://github.com/kbecerra21/The-Role-of-Race-and-Mental-Illness-Diagnosis-on-Stigmatization-of-Homeless-Individuals-kvbecerra
 
-Filename of manuscript .qmd:
+Filename of manuscript .qmd:The Role of Race and Mental Illness Diagnosis on Stigmatization of Homeless Individuals.qmd
 
-Filename of knitted .pdf:
+Filename of knitted .pdf:The Role of Race and Mental Illness Diagnosis on Stigmatization of Homeless Individual.pdf
 
 
 ## AI Statement
 
-Describe whether and how you used AI/LLMs when completing this project: 
+Describe whether and how you used AI/LLMs when completing this project: I used Ai to check errors on larger chunks as sometimes I would be missing a ) or , and i also used the APAquarto extension website to help guide my project https://wjschne.github.io/apaquarto/options.html.
 
-Optionally (for engagement points) reflect on your use of AI:
+Optionally (for engagement points) reflect on your use of AI: I think that AI was helpful as sometimes after looking over and over at my code and not figuring out where the problem was I would get frustrated and lost and i could not see that the problem was a simple ) or - that was causing the issue.I think however it would benefit me more to simply just pay more attention so i don't make the same mistake. I also think that having an old computer that gets stuck quiet often was not helpful. Especially on the last day when all my work from the day went missing. 
 
-
-
+I did not use AI for any of my text this a paper that i used for an undergraduate reserach project and that I adapted to fit the requirements of this class in addition its a project that i will send to my undergraduate professor to help with the next steps of the project that is to look at demographics but before than the professor wanted to be reminded of the findings of this project. 
 
 
 ## Overall requirements
