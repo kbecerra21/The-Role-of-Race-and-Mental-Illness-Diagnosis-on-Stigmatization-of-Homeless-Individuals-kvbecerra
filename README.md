@@ -5,18 +5,25 @@ This repository contains an R project focused on exploring the stigmatization of
 
 ## Project Structure
 
+# Data Stigmatization of Homeless Individuals
+
+This repository contains an R project focused on exploring the stigmatization of homeless individuals, with a particular emphasis on how race and mental illness diagnosis influence this process. The project includes datasets, analysis scripts, and documents related to the research.
+
+## Project Structure
+
 ```plaintext
 Data_Stigmatization_of_HomelessIndividuals/
 │── data/                                          # Directory for data files
-│── _extensions/wjschne/apaquarto/                 # APA Quarto extension
-│── all-example-files/                             # Sample documents
-│── .gitignore                                     # Git ignore file
-│── README.md                                      # Project readme
-│── STIGMA-KV.Rproj                                # R project file
-│── STIGMA-KV.pdf                                  # Rendered PDF output (testing)
-│── STIGMA-KV.tex                                  # LaTeX file (testing)
-│── Stigmatization.bib                             # Bibliography file
-│── The Role of Race and Mental Illness Diagnosis on Stigmatization of Homeless Individuals.qmd  # Quarto document
-│── The-Role-of-Race-and-Mental-Illness-Diagnosis-on-Stigmatization-of-Homeless-Individuals.pdf  # Assessment PDF output
-│── The-Role-of-Race-and-Mental-Illness-Diagnosis-on-Stigmatization-of-Homeless-Individuals.tex  # LaTeX file for assessment
-│── research-assessment.md                         # Assessment markdown file
+│   │── cleaning_ Stigmatization of homeless individuals .Rmd # This file has all the cleaning code for this study
+│   │── Experimental_Study_Karen.csv                # The original data file for the study not cleaned
+│   │── SPSS File for Experimental Study Karen.sav  # The original SPSS file for the study not cleaned
+│── _extensions/wjschne/apaquarto/                 # APA Extension for Quarto
+│── all-example-files/                             # All sample docs that came with extension
+│── .gitignore                                     # Initial commit (Git ignore file)
+│── README.md                                     # Readme file with repo details and this tree
+|__ testing files/                                # Directory for testing files all files that were render to test if pdf worked
+│── The Role of Race and Mental Illness Diagnosis on Stigmatization of Homeless Individuals.qmd  #  QMD file for final project 
+│── The-Role-of-Race-and-Mental-Illness-Diagnosis-on-Stigmatization-of-Homeless-Individuals.pdf  # PDF for final project
+│── The-Role-of-Race-and-Mental-Illness-Diagnosis-on-Stigmatization-of-Homeless-Individuals.tex  # Assessment MD and PDF test (LaTeX)
+│── research-assessment.md                         # Assessment.md with all objectives for thsi project 
+
