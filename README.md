@@ -1,5 +1,11 @@
 # The-Role-of-Race-and-Mental-Illness-Diagnosis-on-Stigmatization-of-Homeless-Individuals-kvbecerra
-#tree
+# Data Stigmatization of Homeless Individuals
+
+This repository contains an R project focused on exploring the stigmatization of homeless individuals, with a particular emphasis on how race and mental illness diagnosis influence this process.
+
+## Project Structure
+
+```plaintext
 Data_Stigmatization_of_HomelessIndividuals/
 │── data/                                          # Directory for data files
 │── _extensions/wjschne/apaquarto/                 # APA Quarto extension
