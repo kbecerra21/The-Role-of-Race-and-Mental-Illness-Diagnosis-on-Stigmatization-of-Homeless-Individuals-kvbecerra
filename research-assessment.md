@@ -142,15 +142,17 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
         -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
+        In data cleaning 2 rmarkdown file but also in qmd 
         
 6.  Use arithmetic, comparison, and logical operators
 
     1. Uses all three types of operators
     2. Uses multiple operators in data transformation pipelines and/or inline R code
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
+        In data cleaning 2 rmarkdown file used to clean data further 
 
 7.  Parse and define functions and arguments
 
@@ -158,19 +160,20 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. User-defined function(s) run(s) without error and produces expected output in at least 2 contexts
     3. Functions are well-documented with comments
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
+        In data cleaning 2 rmarkdown file used to clean data further
 
 8.  Parse and write conditional statements and/or loops
 
     1. Uses conditional in multiple contexts, including dplyr pipelines
     2. Uses multiple types of conditional/loop functions (e.g., `if_else()`, `case_when()`, `for`, `while`)
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
-        
+        In data cleaning 2 rmarkdown file used to clean data further
 
 9.  Use `readr` functions to read in and write out data
 
@@ -178,7 +181,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Writes out intermediate and/or final datasets in code chunks or sourced scripts
     3. Uses only relative paths that run without error when repo is cloned
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 

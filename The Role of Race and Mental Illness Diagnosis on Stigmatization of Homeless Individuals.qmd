@@ -140,14 +140,49 @@ This study used multiple questionnaires to examine the effects and interactions 
 A Memory Check assessed participants' recall of story details, specifically the race and mental illness of the character. 
 
 ### Demographic Questionnaire
-Finally, a demographic questionnaire collected information on age, ethnicity, political affiliation, and familiarity with homelessness.
+Demographics questionnaire that asked participants about their age, ethnicity, residence, political affiliation, and familiarity with homelessness.
 
-## Analysis
-The study used a 2 x 3 between-subjects design with race (Black/White) and mental illness diagnosis (schizophrenia, substance use disorder, no mental illness) as independent variables, and stigmatization as the dependent variable. Stigmatization was measured through factors like blame, perceived dangerousness, social distance, willingness to help, and emotional response.
+# Results 
+```{r}
+#| label: anova-analysis
+#| echo: true
+#| results: hide
+#| include: false
 
-# Results
+library(tidyverse)
 
+# Read the dataset
+Experimental_Study_Karen <- read_csv("Data_Stigmatization_of HomelessIndividuals/Experimental_Study_Karen.csv")
 
+# Conducting the 2x3 between-subjects ANOVA using aov()
+anova_results <- aov(socialdistance_1 ~ IV1_race * IV2_diagnosis, data = Experimental_Study_Karen)
+
+# Display the summary of the ANOVA results
+summary(anova_results)
+
+```
+### Figure 1 Main effect of mental illness diagnosis on desired social distance stigma.
+```{r}
+#| label: fig-social-distance-stigma
+#| fig-cap: Main effect of mental illness diagnosis on desired social distance stigma.
+#| apa-note: The plot illustrates the significant difference in social distance stigma scores between homeless individuals with no diagnosis, schizophrenia, and substance use disorder.
+
+library(tidyverse)
+
+# Example data for social distance stigma levels based on diagnosis
+data <- tibble(
+  diagnosis = c("No Diagnosis", "Schizophrenia", "Substance Use Disorder"),
+  mean_stigma = c(2.58, 3.40, 3.24),
+  sd_stigma = c(1.12, 1.21, 1.26)
+)
+
+# Creating the bar plot for the main effect of mental illness diagnosis
+ggplot(data, aes(x = diagnosis, y = mean_stigma, fill = diagnosis)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_errorbar(aes(ymin = mean_stigma - sd_stigma, ymax = mean_stigma + sd_stigma), width = 0.2) +
+  labs(x = "Mental Illness Diagnosis", y = "Mean Social Distance Stigma", title = "Impact of Mental Illness Diagnosis on Social Distance Stigma") +
+  theme_minimal()
+```
 
 # Discussion
 
