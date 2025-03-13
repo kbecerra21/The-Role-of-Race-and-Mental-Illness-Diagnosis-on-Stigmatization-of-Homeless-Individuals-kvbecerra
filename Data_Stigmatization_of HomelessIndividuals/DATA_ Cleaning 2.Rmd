@@ -2,4 +2,71 @@
 title: "DATA_ Cleaning 2"
 output: html_document
 ---
+Objective 
+```{r}
+# Uncomment these lines to install the required packages if not already installed
+# install.packages("dplyr")
+# install.packages("tidyr")
+# install.packages("stringr")
+# install.packages("forcats")
+# install.packages("readr")
+
+# Load required libraries
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(forcats)
+library(readr)
+
+```
+
+```{r}
+# Corrected code with one-dimensional logical vectors I will not use for my data but is helpful incase i wanted to change the data for a later analysis 
+
+data_cleaned <- stigmatization_data %>%
+  mutate(
+    # Arithmetic operator (addition)
+    age_plus_0 = age + 0,
+    
+    # Comparison operator (greater than)
+    age_over_30 = age > 30,
+    
+    # Logical operator (AND)
+    valid_data = (age > 18 & age <= 100)
+  ) %>%
+  filter(valid_data)  # Ensure valid_data is a one-dimensional logical vector
+
+```
+
+```{r}
+# Define a function to clean data for missing values and remove outliers
+clean_data <- function(data, missing_value_method = "median", remove_outliers = TRUE) {
+  # Handling missing values
+  if (missing_value_method == "median") {
+    data$age[is.na(data$age)] <- median(data$age, na.rm = TRUE)
+    data$socialdistance_1[is.na(data$socialdistance_1)] <- median(data$socialdistance_1, na.rm = TRUE)
+  }
+  
+  # Removing outliers (example: age > 100)
+  if (remove_outliers) {
+    data <- data[data$age <= 100, ]
+  }
+  
+  return(data)
+}
+
+# Apply function to clean data
+stigmatization_data <- clean_data(stigmatization_data)
+# again this is something that i will not be uding for my current project 
+
+```
+
+```{r}
+# Read in cleaned data (using  a relative path)
+stigmatization_data <- read_csv("cleaned_data.csv")
+
+# Write out the final cleaned data (using relative path)
+write_csv(stigmatization_data, "final_cleaned_data.csv")
+
+```
 
