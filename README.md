@@ -1,13 +1,6 @@
 # The-Role-of-Race-and-Mental-Illness-Diagnosis-on-Stigmatization-of-Homeless-Individuals-kvbecerra
-# Data Stigmatization of Homeless Individuals
 
 This repository contains an R project focused on exploring the stigmatization of homeless individuals, with a particular emphasis on how race and mental illness diagnosis influence this process.
-
-## Project Structure
-
-# Data Stigmatization of Homeless Individuals
-
-This repository contains an R project focused on exploring the stigmatization of homeless individuals, with a particular emphasis on how race and mental illness diagnosis influence this process. The project includes datasets, analysis scripts, and documents related to the research.
 
 ## Project Structure
 
