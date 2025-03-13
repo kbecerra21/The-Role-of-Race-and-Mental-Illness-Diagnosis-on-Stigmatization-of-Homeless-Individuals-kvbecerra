@@ -116,22 +116,55 @@ Building on the research by @corriganPublicStigmaMental2009, @markowitzRaceGende
 # Method
 
 ## Participants
-The sample for this study consisted of 215 participants, primarily college-aged students in the United States, with ages ranging from The ages of the sample ranged from 18 to 79 (M = `r round(35.08, 2)`, SD = `r round(16.33, 2)`).The sample was 44.7% White, 13% Hispanic, 33% Black, 4.2% Asian American, 3.3% Biracial, and 1.9% other ethnicities. The sample identified politically as 52.6% Liberal, 37.1% Moderate, and 10.3% Conservative.The sample was broken down into 1.9% living in a rural community, 58.6% living in the suburbs, 12.1% living in a small town, and 27.4% living in a large metropolitan city. Finally, the distribution of gender was as follows: 29.3% male, 68.8% female, and 1.9% other responses.
 
+The sample for this study consisted of 215 participants, primarily college-aged students in the United States, with ages ranging from The ages of the sample ranged from 18 to 79 (M = `r round(35.08, 2)`, SD = `r round(16.33, 2)`).The sample was 44.7% White, 13% Hispanic, 33% Black, 4.2% Asian American, 3.3% Biracial, and 1.9% other ethnicities. The sample identified politically as 52.6% Liberal, 37.1% Moderate, and 10.3% Conservative.The sample was broken down into 1.9% living in a rural community, 58.6% living in the suburbs, 12.1% living in a small town, and 27.4% living in a large metropolitan city. Finally, the distribution of gender was as follows: 29.3% male, 68.8% female, and 1.9% other responses. Table 1 provides a summary of the demographic characteristics of the sample.
+
+### Table 1
+Demographic Information of Participants
+
+| **Demographic**                    | **Percentage** |
+|------------------------------------|----------------|
+| **Age (M = 35.08, SD = 16.33)**    | -              |
+| **Ethnicity**                      |                |
+| White                              | 44.7%          |
+| Hispanic                           | 13%            |
+| Black                              | 33%            |
+| Asian American                     | 4.2%           |
+| Biracial                           | 3.3%           |
+| Other Ethnicities                  | 1.9%           |
+| **Political Affiliation**          |                |
+| Liberal                            | 52.6%          |
+| Moderate                           | 37.1%          |
+| Conservative                       | 10.3%          |
+| **Location**                       |                |
+| Rural Community                    | 1.9%           |
+| Suburbs                            | 58.6%          |
+| Small Town                         | 12.1%          |
+| Large Metropolitan City            | 27.4%          |
+| **Gender**                         |                |
+| Male                               | 29.3%          |
+| Female                             | 68.8%          |
+| Other Responses                    | 1.9%           |
+
+<p style="text-align: center; font-style: italic;">**Note**: Percentages may not sum to 100 due to rounding.</p>
 
 ## Measures
-This study used multiple questionnaires to examine the effects and interactions of race and mental illness on stigmatization toward homeless individuals. Participants were assigned to one of six experimental conditions using vignettes adapted from Markowitz and Syverson (2019), manipulating race and mental illness. Table 1 presents the vignettes used in this study. 
+This study used multiple questionnaires to examine the effects and interactions of race and mental illness on stigmatization toward homeless individuals. Participants were assigned to one of six experimental conditions using vignettes adapted from @markowitzRaceGenderHomelessness2021, manipulating race and mental illness. Table 2 presents the vignettes used in this study. 
 
-| **Condition**                                       | **Race**   | **Mental Illness**       | **Character Description**                             |
-|-----------------------------------------------------|------------|--------------------------|-------------------------------------------------------|
-| Condition 1: Black character/No mental illness      | Black      | No mental illness         | Male homeless individual with same life story         |
-| Condition 2: Black character/Substance use disorder | Black      | Substance use disorder    | Male homeless individual with same life story         |
-| Condition 3: Black character/Schizophrenia          | Black      | Schizophrenia             | Male homeless individual with same life story         |
-| Condition 4: White character/No mental illness     | White      | No mental illness         | Male homeless individual with same life story         |
-| Condition 5: White character/Substance use disorder | White      | Substance use disorder    | Male homeless individual with same life story         |
-| Condition 6: White character/Schizophrenia         | White      | Schizophrenia             | Male homeless individual with same life story         |
+### Table 2
+Vignettes Used in the Study
 
-: Experimental conditions {#tbl-mytable2 apa-note="Note All vignettes used the same life story for the male homeless individual, with only race and mental illness varying across conditions" data-quarto-disable-processing="true"}
+| **Condition**                                        | **Race**   | **Mental Illness**       | **Character Description**                             |
+|------------------------------------------------------|------------|--------------------------|-------------------------------------------------------|
+| Condition 1: Black character/No mental illness       | Black      | No mental illness         | Male homeless individual with same life story         |
+| Condition 2: Black character/Substance use disorder  | Black      | Substance use disorder    | Male homeless individual with same life story         |
+| Condition 3: Black character/Schizophrenia           | Black      | Schizophrenia             | Male homeless individual with same life story         |
+| Condition 4: White character/No mental illness      | White      | No mental illness         | Male homeless individual with same life story         |
+| Condition 5: White character/Substance use disorder  | White      | Substance use disorder    | Male homeless individual with same life story         |
+| Condition 6: White character/Schizophrenia          | White      | Schizophrenia             | Male homeless individual with same life story         |
+
+**Note:** All vignettes used the same life story for the male homeless individual, with only race and mental illness varying across conditions.
+
 
 ### Attribution Questionnaire
  The Attribution Questionnaire[@corriganAttributionModelPublic2003] assessed stigmatization aspects like social distance, blame, perceived dangerousness, emotional response, and willingness to help. 
@@ -143,7 +176,7 @@ A Memory Check assessed participants' recall of story details, specifically the 
 Demographics questionnaire that asked participants about their age, ethnicity, residence, political affiliation, and familiarity with homelessness.
 
 # Results
-
+## MAin Effect of Diagnosis on Social Distance Stigma
 
 ```{r}
 #| label: anova-analysis
@@ -184,12 +217,8 @@ ggplot(data, aes(x = diagnosis, y = mean_stigma, fill = diagnosis)) +
        title = "Impact of Mental Illness Diagnosis on Social Distance Stigma") +
   theme_minimal(base_size = 10)
 ```
-## Main effects of race and diagnosis on social interaction
 
-Figure 1 shows the effect of mental illness diagnosis on social distance stigma. The mean stigma scores for each diagnosis are as follows: 
-- **No Diagnosis**: `r data$mean_stigma[1]` (SD = `r data$sd_stigma[1]`)
-- **Schizophrenia**: `r data$mean_stigma[2]` (SD = `r data$sd_stigma[2]`) 
-- **Substance Use Disorder**: `r data$mean_stigma[3]` (SD = `r data$sd_stigma[3]`)
+Figure 1 shows the effect of mental illness diagnosis on social distance stigma. The mean stigma scores for each diagnosis are as follows:No Diagnosis: `r data$mean_stigma[1]` (SD = `r data$sd_stigma[1]`), Schizophrenia: `r data$mean_stigma[2]` (SD = `r data$sd_stigma[2]`),Substance Use Disorder: `r data$mean_stigma[3]` (SD = `r data$sd_stigma[3]`)
 
 The results indicate that individuals with schizophrenia (M = `r data$mean_stigma[2]`) and substance use disorder (M = `r data$mean_stigma[3]`) experience higher levels of social distance stigma compared to those with no diagnosis (M = `r data$mean_stigma[1]`). However, these differences were not statistically significant.
 
