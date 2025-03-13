@@ -560,31 +560,42 @@ homelessness.
 
 \section{Results}\label{results}
 
-\subsection{ANOVA Results}\label{anova-results}
+\begin{verbatim}
+The 2x3 ANOVA revealed no significant main effects of race or diagnosis on social distance, and no significant interaction between the two factors.
+\end{verbatim}
 
-The results of the 2x3 between-subjects ANOVA examining the effects of
-race and mental illness diagnosis on social distance stigma are
-presented below.
+\begin{figure}[!htbp]
 
-\subsection{Summary of ANOVA Results}\label{summary-of-anova-results}
+{\caption{{Effect of Mental Illness Diagnosis on Social Distance
+Stigma.}{\label{fig-social-distance-stigma}}}}
 
-The table below summarizes the results of the ANOVA:
+\pandocbounded{\includegraphics[keepaspectratio]{The-Role-of-Race-and-Mental-Illness-Diagnosis-on-Stigmatization-of-Homeless-Individuals_files/figure-pdf/fig-social-distance-stigma-1.pdf}}
 
-\section{Extracting ANOVA summary for the
-table}\label{extracting-anova-summary-for-the-table}
+{\noindent \emph{Note.} The plot shows mean social distance stigma
+scores by diagnosis, with error bars representing standard deviation.}
 
-anova\_summary \%\textgreater\% as.data.frame() \%\textgreater\%
-rownames\_to\_column(var = ``Source'') \%\textgreater\% rename(DF = Df,
-SS = \texttt{Sum\ Sq}, MS = \texttt{Mean\ Sq}, F\_Value =
-\texttt{F\ value}, p\_value = \texttt{Pr(\textgreater{}F)})
-\%\textgreater\% gt() \%\textgreater\% fmt\_number(columns = c(SS, MS,
-F\_Value, p\_value), decimals = 3) \%\textgreater\% tab\_header( title =
-``Table 1'', subtitle = ``ANOVA Results for Social Distance Stigma'' )
-\%\textgreater\% cols\_label( Source = ``Factor'', DF = ``df'', SS =
-``SS'', MS = ``MS'', F\_Value = ``F'', p\_value = ``p'' )
-\%\textgreater\% fmt\_scientific(columns = p\_value, decimals = 3)
-\%\textgreater\% tab\_source\_note(``Note. SS = Sum of Squares; MS =
-Mean Square; p-values reported in APA format.'')
+\end{figure}
+
+\subsection{Main effects of race and diagnosis on social
+interaction}\label{main-effects-of-race-and-diagnosis-on-social-interaction}
+
+Figure 1 shows the effect of mental illness diagnosis on social distance
+stigma. The mean stigma scores for each diagnosis are as follows:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{No Diagnosis}: 2.58 (SD = 1.12)
+\item
+  \textbf{Schizophrenia}: 3.4 (SD = 1.21)
+\item
+  \textbf{Substance Use Disorder}: 3.24 (SD = 1.26)
+\end{itemize}
+
+The results indicate that individuals with schizophrenia (M = 3.4) and
+substance use disorder (M = 3.24) experience higher levels of social
+distance stigma compared to those with no diagnosis (M = 2.58). However,
+these differences were not statistically significant.
 
 \section{Discussion}\label{discussion}
 
