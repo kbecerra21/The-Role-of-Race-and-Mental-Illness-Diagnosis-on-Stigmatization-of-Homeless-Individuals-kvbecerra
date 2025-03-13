@@ -204,7 +204,7 @@ summary(anova_results)
 #| fig-cap: Effect of Mental Illness Diagnosis on Social Distance Stigma.
 #| apa-note: The plot shows mean social distance stigma scores by diagnosis, with error bars representing standard deviation.
 
-# Example data for plotting
+# data for plotting
 data <- tibble(
   diagnosis = c("No Diagnosis", "Schizophrenia", "Substance Use Disorder"),
   mean_stigma = c(2.58, 3.40, 3.24),
