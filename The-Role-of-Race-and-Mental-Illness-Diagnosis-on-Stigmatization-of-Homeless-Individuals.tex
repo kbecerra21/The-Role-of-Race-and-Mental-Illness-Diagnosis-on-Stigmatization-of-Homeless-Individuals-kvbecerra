@@ -560,22 +560,31 @@ homelessness.
 
 \section{Results}\label{results}
 
-\subsubsection{Figure 1 Main effect of mental illness diagnosis on
-desired social distance
-stigma.}\label{figure-1-main-effect-of-mental-illness-diagnosis-on-desired-social-distance-stigma.}
+\subsection{ANOVA Results}\label{anova-results}
 
-\begin{figure}[!htbp]
+The results of the 2x3 between-subjects ANOVA examining the effects of
+race and mental illness diagnosis on social distance stigma are
+presented below.
 
-{\caption{{Main effect of mental illness diagnosis on desired social
-distance stigma.}{\label{fig-social-distance-stigma}}}}
+\subsection{Summary of ANOVA Results}\label{summary-of-anova-results}
 
-\pandocbounded{\includegraphics[keepaspectratio]{The-Role-of-Race-and-Mental-Illness-Diagnosis-on-Stigmatization-of-Homeless-Individuals_files/figure-pdf/fig-social-distance-stigma-1.pdf}}
+The table below summarizes the results of the ANOVA:
 
-{\noindent \emph{Note.} The plot illustrates the significant difference
-in social distance stigma scores between homeless individuals with no
-diagnosis, schizophrenia, and substance use disorder.}
+\section{Extracting ANOVA summary for the
+table}\label{extracting-anova-summary-for-the-table}
 
-\end{figure}
+anova\_summary \%\textgreater\% as.data.frame() \%\textgreater\%
+rownames\_to\_column(var = ``Source'') \%\textgreater\% rename(DF = Df,
+SS = \texttt{Sum\ Sq}, MS = \texttt{Mean\ Sq}, F\_Value =
+\texttt{F\ value}, p\_value = \texttt{Pr(\textgreater{}F)})
+\%\textgreater\% gt() \%\textgreater\% fmt\_number(columns = c(SS, MS,
+F\_Value, p\_value), decimals = 3) \%\textgreater\% tab\_header( title =
+``Table 1'', subtitle = ``ANOVA Results for Social Distance Stigma'' )
+\%\textgreater\% cols\_label( Source = ``Factor'', DF = ``df'', SS =
+``SS'', MS = ``MS'', F\_Value = ``F'', p\_value = ``p'' )
+\%\textgreater\% fmt\_scientific(columns = p\_value, decimals = 3)
+\%\textgreater\% tab\_source\_note(``Note. SS = Sum of Squares; MS =
+Mean Square; p-values reported in APA format.'')
 
 \section{Discussion}\label{discussion}
 
