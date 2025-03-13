@@ -1,23 +1,24 @@
 ---
-title: "My Title"
-shorttitle: "Short Title in Running Header"
+title: "The Role of Race and Mental Illness Diagnosis on Stigmatization of Homeless Individuals"
+shorttitle: "STIGMA, HOMELESSNESS, MENTAL ILLNESS, AND RACE"
 author:
-  - name: Jane Doe
+  - name: Karen Veronica Becerra
     corresponding: true
-    orcid: 0000-0000-0000-0001
-    email: janedoe@generic.edu
+    orcid: 0009-0006-4967-0955
+    email: kvbecerra@uchicago.edu
     affiliations:
-      - name: Generic University
-        department: Department of Scholarly Studies
-        address: 1234 Capital St.
-        city: New York
-        region: NY
+      - id: uchicago
+        name: "The University of Chicago"
+        group: MAPSS Psychology
+        department: Department of Psychology
+        address: 5848 S. University Avenue
+        city: Chicago
+        region: IL
         country: USA
-        postal-code: 12084-1234
+        postal-code: 60637
+blank-lines-above-author-note: 2
 author-note:
-  status-changes: 
-    affiliation-change: ~
-    deceased: ~
+  status-changes: ~
   disclosures:
     study-registration: ~
     data-sharing: ~
@@ -26,40 +27,55 @@ author-note:
     financial-support: ~
     gratitude: ~
     authorship-agreements: ~
-abstract: "This document is a template."
-keywords: [keyword1, keyword2, keyword3]
-bibliography: bibliography.bib
+abstract: "Homelessness in the United States is a persistent problem that can have serious implications on the well-being of homeless individuals. The present study focused on the role of race and mental illness diagnosis on the stigmatization of homeless individuals, specifically looking at the outcomes of the Attribution Questionnaire. This questionnaire assessed the aspects of social distance, blame, dangerousness, concern, and willingness to help of 215 participants varying in ages across adulthood. The study was a self-paced online form that used six experimental vignettes. The results indicated that there were no significant interactions of race x diagnosis on stigmatization. Additionally, race had no significant main effects, suggesting it was not a significant factor for stigmatization of homeless individuals. However, there were some significant main effects of diagnosis. Findings might suggest that future work in reducing mental illness stigma and increasing education could help decrease stigmatization of the homeless population."
+keywords: [Homelessness, Stigmatization, Race, Mental Illness, Diagnosis, Attribution Questionnaire]
+impact-statement: ~
+floatsintext: true
+numbered-lines: false
+bibliography: "Stigmatization.bib"
+suppress-title-page: false
+link-citations: true
+mask: false
+masked-citations: []
+draft-date: false
+lang: en
+language:
+  citation-last-author-separator: "and"
+  citation-masked-author: "Masked Citation"
+  citation-masked-date: "n.d."
+  citation-masked-title: "Masked Title"
+  email: "Email"
+  title-block-author-note: "Author Note"
+  title-block-correspondence-note: "Correspondence concerning this article should be addressed to"
+  title-block-role-introduction: "Author roles were classified using the Contributor Role Taxonomy (CRediT; [credit.niso.org](https://credit.niso.org)) as follows:"
+  title-impact-statement: "Impact Statement"
+  references-meta-analysis: "References marked with an asterisk indicate studies included in the meta-analysis."
 format:
-  apaquarto-docx: default
-  apaquarto-html: default
-  apaquarto-typst: default
+  apaquarto-docx: 
+    toc: false
+  apaquarto-html: 
+    toc: true
   apaquarto-pdf:
     documentmode: man
+    keep-tex: true
+fontsize: 12pt
+mainfont: "Times New Roman"
+donotrepeattitle: true
+execute: 
+  freeze: auto
+  working-directory: project
 ---
 
-# Method
+```{r}
+#| label: setup
+#| include: false
+library(conflicted)
+library(tidyverse)
+library(flextable)
+library(ftExtra)
+library(knitr)
+conflicts_prefer(dplyr::filter, .quiet = TRUE)
+conflicts_prefer(flextable::separate_header, .quiet = TRUE)
 
-## Participants
-
-## Measures
-
-## Procedure
-
-# Results
-
-# Discussion
-
-## Limitations and Future Directions
-
-## Conclusion
-
-# References
-
-<!-- References will auto-populate in the refs div below -->
-
-::: {#refs}
-:::
-
-# Appendix
-
-# Title for Appendix
+```
+Homelessness in the United States and the struggle to give individuals adequate housing is a persistent problem. Before the Covid -19 pandemic, the number of homeless individuals was on the rise with 568,000 individuals experiencing homelessness in 2019, an increase of 15,000 from the previous year[@frostHomelessnessWasRise2020]. With the current Covid-19 pandemic, we can only predict that those numbers have continued to increase. In the United States, 2.4% of homeless individuals die each year (Stasha, 2020). We know that the general population often tries to distance itself from the stigmatized population, more specifically the homeless population. Homeless individuals face greater stigma and social isolation and often are removed from public parks and other locations because the general public does not want them too close. The problems caused by stigmatization, such as social distancing, can affect the homeless population in terms of resources that they have available such as sanitation centers, employment, and social support. Often the homeless population lacks resources and is exposed to the elements which can increase their mortality, as well as the chance of being malnourished, having parasitic infestations, periodontal disease, degenerative joint diseases, venereal diseases, cirrhosis, and hepatitis-related to intravenous (IV) drug abuse. Public attitudes toward homeless individuals can influence policies and the services provided to this population. The attitudes displayed through the stigma of homeless individuals can have an impact on both physical and psychological health and willingness to access services. The impact of these stigmas has shown to have serious implications on the well-being of homeless individuals. The present study examined factors that could predict levels of stigmatization expressed towards homeless individuals. 
