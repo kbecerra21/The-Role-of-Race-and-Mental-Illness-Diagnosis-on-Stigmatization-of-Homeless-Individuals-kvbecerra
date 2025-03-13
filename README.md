@@ -1,10 +1,10 @@
 # The-Role-of-Race-and-Mental-Illness-Diagnosis-on-Stigmatization-of-Homeless-Individuals-kvbecerra
 
 This repository contains an R project focused on exploring the stigmatization of homeless individuals, with a particular emphasis on how race and mental illness diagnosis influence this process.
-#Research Question
+# Research Question
 How do race and mental illness diagnosis impact the stigmatization of homeless individuals?
 # Purpose for this Repository
-This Project will be use to write up the results of a project that I conducted in my undegraduate institution with the purpose of formulating it into an APA paper that will be sent to Undergraduate professor Dr. Lisa Hayes. Dr. Hayes is planning to us this paper to remind her self of the results as the next face of the project is to look at how participant demographics affected the results. I have included a a small section of this paper to show some initial resutls. 
+This Project will be use to write up the results of a project that I conducted in my undergraduate institution with the purpose of formulating it into an APA paper that will be sent to Undergraduate professor Dr. Lisa Hayes. Dr. Hayes is planning to us this paper to remind her self of the results as the next face of the project is to look at how participant demographics affected the results. I have included a a small section of this paper to show some initial results. 
 
 ## Project Structure
 
