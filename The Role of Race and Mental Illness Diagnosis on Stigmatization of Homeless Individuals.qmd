@@ -81,18 +81,19 @@ conflicts_prefer(flextable::separate_header, .quiet = TRUE)
 Homelessness in the United States and the struggle to give individuals adequate housing is a persistent problem. Before the Covid -19 pandemic, the number of homeless individuals was on the rise with 568,000 individuals experiencing homelessness in 2019, an increase of 15,000 from the previous year[@frostHomelessnessWasRise2020]. With the current Covid-19 pandemic, we can only predict that those numbers have continued to increase. In the United States, 2.4% of homeless individuals die each year (Stasha, 2020). We know that the general population often tries to distance itself from the stigmatized population, more specifically the homeless population. Homeless individuals face greater stigma and social isolation and often are removed from public parks and other locations because the general public does not want them too close. The problems caused by stigmatization, such as social distancing, can affect the homeless population in terms of resources that they have available such as sanitation centers, employment, and social support. Often the homeless population lacks resources and is exposed to the elements which can increase their mortality, as well as the chance of being malnourished, having parasitic infestations, periodontal disease, degenerative joint diseases, venereal diseases, cirrhosis, and hepatitis-related to intravenous (IV) drug abuse. Public attitudes toward homeless individuals can influence policies and the services provided to this population. The attitudes displayed through the stigma of homeless individuals can have an impact on both physical and psychological health and willingness to access services. The impact of these stigmas has shown to have serious implications on the well-being of homeless individuals. The present study examined factors that could predict levels of stigmatization expressed towards homeless individuals. 
 
 ## Literature review 
->Research on the stigma of mental illness, homelessness, and race highlights its harmful effects on health and social integration. @corriganPublicStigmaMental2009 examined public stigma, focusing on stereotypes like causal attribution (blaming individuals for their condition) and dangerousness (perceiving them as threatening). Using vignette-based experiments, the study found that people with psychiatric disorders, especially those with drug addiction, faced greater stigma than those with physical disabilities, laying the foundation for understanding how schizophrenia and substance use disorders contribute to homelessness stigma.
->
->While @corriganAttributionModelPublic2003 explored mental illness stigma, it did not examine health outcomes. In contrast, @weiszStigmatizedIdentitiesPsychological2018 demonstrated that homelessness stigma leads to psychological distress, poor health, and social avoidance. Among 175 volunteers at a homeless event, those experiencing or anticipating stigma reported worse physical and mental health and greater reluctance to seek services. Participants of color faced even higher distress and service avoidance, highlighting the compounded impact of race and homelessness stigma.
->
->Building on this, @markowitzRaceGenderHomelessness2021 investigated race and gender intersections in stigma. They found that black homeless individuals were perceived as more dangerous than white counterparts, though no significant differences in social distance emerged. However, the study's reliance on college-aged participants, who may have been more tolerant than the general population, was a limitation. The present study addresses this by including a broader, more diverse sample.
->
->Similarly, @gattisPerceivedRacialSexual2016 linked racial stigma and discrimination to heightened depression among 89 black adolescents and young adults experiencing homelessness. Using social and minority stress models, the study highlighted how marginalized groups face greater psychological distress due to limited societal support. Though constrained by a small sample, it reinforced the role of racial stigma in homelessness experiences.
->
->In sum, stigma related to homelessness, mental illness, and race profoundly affects psychological and physical health, social integration, and resource access. The present study expands on this research by examining how mental illness and race interact to shape stigma, offering a more nuanced understanding of its impact on homeless individuals
+
+Research on the stigma of mental illness, homelessness, and race highlights its harmful effects on health and social integration. @corriganPublicStigmaMental2009 examined public stigma, focusing on stereotypes like causal attribution (blaming individuals for their condition) and dangerousness (perceiving them as threatening). Using vignette-based experiments, the study found that people with psychiatric disorders, especially those with drug addiction, faced greater stigma than those with physical disabilities, laying the foundation for understanding how schizophrenia and substance use disorders contribute to homelessness stigma.
+
+While @corriganAttributionModelPublic2003 explored mental illness stigma, it did not examine health outcomes. In contrast, @weiszStigmatizedIdentitiesPsychological2018 demonstrated that homelessness stigma leads to psychological distress, poor health, and social avoidance. Among 175 volunteers at a homeless event, those experiencing or anticipating stigma reported worse physical and mental health and greater reluctance to seek services. Participants of color faced even higher distress and service avoidance, highlighting the compounded impact of race and homelessness stigma.
+
+Building on this, @markowitzRaceGenderHomelessness2021 investigated race and gender intersections in stigma. They found that black homeless individuals were perceived as more dangerous than white counterparts, though no significant differences in social distance emerged. However, the study's reliance on college-aged participants, who may have been more tolerant than the general population, was a limitation. The present study addresses this by including a broader, more diverse sample.
+
+Similarly, @gattisPerceivedRacialSexual2016 linked racial stigma and discrimination to heightened depression among 89 black adolescents and young adults experiencing homelessness. Using social and minority stress models, the study highlighted how marginalized groups face greater psychological distress due to limited societal support. Though constrained by a small sample, it reinforced the role of racial stigma in homelessness experiences.
+
+In sum, stigma related to homelessness, mental illness, and race profoundly affects psychological and physical health, social integration, and resource access. The present study expands on this research by examining how mental illness and race interact to shape stigma, offering a more nuanced understanding of its impact on homeless individuals
 
 ## Current Study
->Building on the research by @corriganPublicStigmaMental2009, @markowitzRaceGenderHomelessness2021, and @weiszStigmatizedIdentitiesPsychological2018 the current study aimed to explore how race and mental illness diagnosis impact the stigmatization of homeless individuals. The research specifically focused on mental illness, distinguishing between individuals with schizophrenia and those with substance use disorders, and examined how these factors interact with race in shaping stigma. Previous studies suggest that public stigma varies across mental health conditions and that race plays a crucial role in determining the intensity of stigma. Based on these findings, the present study hypothesized that race would significantly influence social distance, perceived danger, blameworthiness, and emotional responses (concern and help) toward homeless individuals. Specifically, it was predicted that black homeless individuals would experience greater social distance, be perceived as more dangerous and more blameworthy, and receive less concern and help compared to their white counterparts. Additionally, it was anticipated that individuals with substance use disorders would face higher levels of social distance, dangerousness, and blame, while individuals with schizophrenia would receive more concern and help. Lastly, the study predicted that race and mental illness diagnosis would interact to influence all aspects of stigmatization.
+Building on the research by @corriganPublicStigmaMental2009, @markowitzRaceGenderHomelessness2021, and @weiszStigmatizedIdentitiesPsychological2018 the current study aimed to explore how race and mental illness diagnosis impact the stigmatization of homeless individuals. The research specifically focused on mental illness, distinguishing between individuals with schizophrenia and those with substance use disorders, and examined how these factors interact with race in shaping stigma. Previous studies suggest that public stigma varies across mental health conditions and that race plays a crucial role in determining the intensity of stigma. Based on these findings, the present study hypothesized that race would significantly influence social distance, perceived danger, blameworthiness, and emotional responses (concern and help) toward homeless individuals. Specifically, it was predicted that black homeless individuals would experience greater social distance, be perceived as more dangerous and more blameworthy, and receive less concern and help compared to their white counterparts. Additionally, it was anticipated that individuals with substance use disorders would face higher levels of social distance, dangerousness, and blame, while individuals with schizophrenia would receive more concern and help. Lastly, the study predicted that race and mental illness diagnosis would interact to influence all aspects of stigmatization.
 
 ### Hypotheses 
 #### Effect of Race on Stigmatization
@@ -114,65 +115,49 @@ Homelessness in the United States and the struggle to give individuals adequate 
 
 # Method
 
-General remarks on method. This paragraph is optional.
-
-Not all papers require each of these sections. Edit them as needed. Consult the [Journal Article Reporting Standards](https://apastyle.apa.org/jars) for what is needed for your type of article.
-
 ## Participants
+The sample for this study consisted of 215 participants, primarily college-aged students in the United States, with ages ranging from The ages of the sample ranged from 18 to 79 (M = `r round(35.08, 2)`, SD = `r round(16.33, 2)`).The sample was 44.7% White, 13% Hispanic, 33% Black, 4.2% Asian American, 3.3% Biracial, and 1.9% other ethnicities. The sample identified politically as 52.6% Liberal, 37.1% Moderate, and 10.3% Conservative.The sample was broken down into 1.9% living in a rural community, 58.6% living in the suburbs, 12.1% living in a small town, and 27.4% living in a large metropolitan city. Finally, the distribution of gender was as follows: 29.3% male, 68.8% female, and 1.9% other responses.
 
-Who are they? How were they recruited? Report criteria for participant inclusion and exclusion. Perhaps some basic demographic stats are in order. A table is a great way to avoid repetition in statistical reporting.
 
 ## Measures
+This study used multiple questionnaires to examine the effects and interactions of race and mental illness on stigmatization toward homeless individuals. Participants were assigned to one of six experimental conditions using vignettes adapted from Markowitz and Syverson (2019), manipulating race and mental illness. Table 1 presents the vignettes used in this study. 
 
-This section can also be titled **Materials** or **Apparatus**. Whatever tools, equipment, or measurement devices used in the study should be described.
+| **Condition**                                       | **Race**   | **Mental Illness**       | **Character Description**                             |
+|-----------------------------------------------------|------------|--------------------------|-------------------------------------------------------|
+| Condition 1: Black character/No mental illness      | Black      | No mental illness         | Male homeless individual with same life story         |
+| Condition 2: Black character/Substance use disorder | Black      | Substance use disorder    | Male homeless individual with same life story         |
+| Condition 3: Black character/Schizophrenia          | Black      | Schizophrenia             | Male homeless individual with same life story         |
+| Condition 4: White character/No mental illness     | White      | No mental illness         | Male homeless individual with same life story         |
+| Condition 5: White character/Substance use disorder | White      | Substance use disorder    | Male homeless individual with same life story         |
+| Condition 6: White character/Schizophrenia         | White      | Schizophrenia             | Male homeless individual with same life story         |
 
-### Measure A
+: Experimental conditions {#tbl-mytable2 apa-note="Note All vignettes used the same life story for the male homeless individual, with only race and mental illness varying across conditions" data-quarto-disable-processing="true"}
 
-Describe Measure A.
+### Attribution Questionnaire
+ The Attribution Questionnaire[@corriganAttributionModelPublic2003] assessed stigmatization aspects like social distance, blame, perceived dangerousness, emotional response, and willingness to help. 
 
-### Measure B
+### Memory Check
+A Memory Check assessed participants' recall of story details, specifically the race and mental illness of the character. 
 
-Describe Measure B.
+### Demographic Questionnaire
+Finally, a demographic questionnaire collected information on age, ethnicity, political affiliation, and familiarity with homelessness.
 
-#### Subscale B1
-
-A paragraph after a 4th-level header will appear on the same line as the header.
-
-#### Subscale B2
-
-A paragraph after a 4th-level header will appear on the same line as the header.
-
-##### Subscale B2a
-
-A paragraph after a 5th-level header will appear on the same line as the header.
-
-##### Subscale B2b
-
-A paragraph after a 5th-level header will appear on the same line as the header.
-
-## Procedure
-
-What did participants do? How are the data going to be analyzed?
+## Analysis
+The study used a 2 x 3 between-subjects design with race (Black/White) and mental illness diagnosis (schizophrenia, substance use disorder, no mental illness) as independent variables, and stigmatization as the dependent variable. Stigmatization was measured through factors like blame, perceived dangerousness, social distance, willingness to help, and emotional response.
 
 # Results
 
-## Descriptive Statistics
 
-Describe the basic characteristics of the primary variables. My ideal is to describe the variables well enough that someone conducting a meta-analysis can include the study without needing to ask for additional information.
-
-<!-- Add Additional Sections as Needed -->
 
 # Discussion
 
-Describe results in non-statistical terms. <!-- Add sections as needed. -->
+This study examined the role of race and mental illness diagnosis in the stigmatization of homeless individuals, using the Attribution Questionnaire to measure social distance, blame, dangerousness, concern, and willingness to help. We hypothesized that race would significantly impact all aspects of stigmatization, with Black homeless individuals receiving more negative perceptions. However, none of these predictions were supported, as race did not significantly affect the levels of stigmatization. These findings align with some previous studies but contradict others, particularly regarding perceived dangerousness, where Black individuals were not viewed as more dangerous than White individuals.
 
-## Limitations and Future Directions
+Regarding mental illness, we predicted that substance use disorders would result in higher social distance, dangerousness, and blame, while schizophrenia would lead to more concern and help. While there was no significant effect for help and concern, individuals with schizophrenia were perceived as more dangerous and socially distant, contrary to prior research. Substance use disorder diagnosis was associated with higher levels of blame, suggesting a stronger stigmatization of this group.
 
-Every study has limitations. Based on this study, some additional steps might include...
+Regarding interactions between race and mental illness, we predicted that Black homeless individuals with substance use disorders would receive the highest levels of stigma. However, no significant interaction was found. These results suggest that mental illness diagnosis plays a larger role in stigmatization than race.
 
-## Conclusion
-
-Describe the main point of the paper.
+The study had limitations, including an online format that may have influenced responses due to social pressure, and a sample largely composed of college-aged students and liberals, which could affect the generalizability of the findings. Future research should include a more diverse sample and consider factors such as desirability and response truthfulness.
 
 # References
 
