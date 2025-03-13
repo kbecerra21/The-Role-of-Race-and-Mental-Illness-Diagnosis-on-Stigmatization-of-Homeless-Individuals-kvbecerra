@@ -176,8 +176,6 @@ A Memory Check assessed participants' recall of story details, specifically the 
 Demographics questionnaire that asked participants about their age, ethnicity, residence, political affiliation, and familiarity with homelessness.
 
 # Results
-## Descriptive Statistics
-
 ## Main Effect of Diagnosis on Social Distance Stigma
 
 ```{r}
@@ -220,6 +218,7 @@ ggplot(data, aes(x = diagnosis, y = mean_stigma, fill = diagnosis)) +
   theme_minimal(base_size = 10)
 ```
 
+## Mean Stigma Scores by Diagnosis
 Figure 1 shows the effect of mental illness diagnosis on social distance stigma. The mean stigma scores for each diagnosis are as follows:No Diagnosis: `r data$mean_stigma[1]` (SD = `r data$sd_stigma[1]`), Schizophrenia: `r data$mean_stigma[2]` (SD = `r data$sd_stigma[2]`),Substance Use Disorder: `r data$mean_stigma[3]` (SD = `r data$sd_stigma[3]`)
 
 The results indicate that individuals with schizophrenia (M = `r data$mean_stigma[2]`) and substance use disorder (M = `r data$mean_stigma[3]`) experience higher levels of social distance stigma compared to those with no diagnosis (M = `r data$mean_stigma[1]`). However, these differences were not statistically significant.
