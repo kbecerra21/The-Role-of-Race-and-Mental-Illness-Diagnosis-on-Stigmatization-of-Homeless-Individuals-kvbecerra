@@ -191,26 +191,28 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Uses at least 1 `tidyr` function in a data transformation pipeline
     3. Combines `dplyr` and `tidyr` functions in a data transformation pipeline
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
+        final_data_cleaning.rmd file has this infomation 
 
 11. Use `stringr` functions to work with string variables
 
     1. Uses ate least 2 unique `stringr` functions 
     2. Uses `stringr` functions in a data transformation pipeline
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
-
+        
+final_data_cleaning.rmd file has this infomation
 12. Use `forcats` functions to work with factor variables
 
     1. Uses ate least 2 unique `forcats` functions or one function in 2 unique contexts (with different purposes)
     2. Uses `forcats` functions in a data transformation pipeline
     - NOTE: Though they are base R functions, `factor()` and `levels()` can be used to meet this objective as long as they are used in a way that demonstrates the same skills as `forcats` functions, which should involve including optional arguments
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -221,17 +223,19 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     1. Creates at least 2 figures with different `geom_*` layers (e.g., a scatter plot and a bar plot)
     2. At least one plot is multi-variable
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
+        some in qmd for this projects and some in final_data_cleaning.rmd file
 
 14. Use dynamic aesthetics to group data
 
     1. Uses at least 2 unique data-mapped `aes()` arguments (e.g., color, shape, size) to group data in a plot in one or multiple plots
 
-        -   [ ] Objective attempt
+        -   [x ] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
+        some in qmd for this projects and some in final_data_cleaning.rmd file
         
 15. Use facets to create parallel plots
 
@@ -241,10 +245,10 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Combines facets with other dynamic grouping aesthetics
       1. If data only includes 1 sensible grouping variable, it may be used for both the faceting and groupin aes.  
 
-        -   [ ] Objective attempt
+        -   [x ] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
-        
+        final_data_cleaning.rmd file has this infomation
 16. Create publication-quality plots using `theme` and `labs` layers
 
     1. Plots have informative titles, axis labels, and legends
@@ -252,9 +256,10 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3. Variables and labels display in plain English (e.g., "Age (years)" not "child_age_yrs"
     4. Uses at least 1 static aesthetic (e.g., color, shape, size) that improves visual clarity without mapping to data
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
+    final_data_cleaning.rmd file has this infomation
 
 ### Data analysis
 
@@ -265,9 +270,10 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3. Presents results in narrative text, table, or plot
     - NOTE: This objective may be met with only numeric or non-numeric summaries if they are sufficiently complex (at Dr. Dowling's discretion)
 
-        -   [ ] Objective attempt
+        -   [x ] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
+        some in qmd for this projects and some in final_data_cleaning.rmd file
 
 18. Perform simple hypothesis testing analyses for multiple data types
 
@@ -279,6 +285,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
         -   [ ] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
+        some in qmd for this projects and some in final_data_cleaning.rmd file
 
 19. Present and interpret statistics in manuscript narrative
 
@@ -287,7 +294,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3. Discriminates between informative and non-informative statistics and presents only the former in narrative text
     4. Uses dynamic inline R code to render data-dependent text
 
-        -   [ ] Objective attempt
+        -   [x ] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -360,7 +367,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     4. Results are not displayed as raw R output
     5. Chunks are organized sensibly and appear near the text they support
 
-        -   [ ] Objective attempt
+        -   [x ] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -382,7 +389,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     4. Includes at least 1 footnote
     - NOTE: This is going to be one of the most flexible objectives to demonstrate.  You need to demonstrate a range of markdown skills and use them to make a readable, informative manuscript. Hitting the four points above should do that, but you can use your judgment about what kind of markdown features will best serve your project. No matter what, you should use markdown to follow APA7 guidelines.
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -392,7 +399,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Replaces static text with inline R references in at least 1 character context
     3. Ideally, uses inline R references for *all* data-dependent text
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
 
@@ -435,10 +442,7 @@ Alternatively/additionally in mind some of the suggested ways to earn engagement
 - Making excellent use of markdown features to create a polished final product
 - Having a maximally reproducible and dynamic manuscript
 - Fully committing to best practices for version control and GitHub integration/organization
-
-
-
-
+Given the the fact that i had to start my project from pretty much Zero i only was able to created 2 tables in the qmd file and 1 plot this was only to test one of the main affects that I predicted in my hypothesis. I ran a couple more test and created more plots in the final_data_cleaning.rmd file. This could be use for summarizing the results and at some point were part of my qmd file in chuck codes but due to the circumstances I was not able to put them back in or refine them like they were before.
 ## Grading
 
 All final projects are graded by Dr. Dowling. You will see your grade on Canvas separated into two categories: objective points and engagement points.
