@@ -11,6 +11,7 @@ Data_Stigmatization_of_HomelessIndividuals/
 │   │── Experimental_Study_Karen.csv                # The original data file for the study not cleaned
 │   │── SPSS File for Experimental Study Karen.sav  # The original SPSS file for the study not cleaned
 │── _extensions/wjschne/apaquarto/                 # APA Extension for Quarto
+|── Stigmatization.bib                             # Bibliography file for the study
 │── all-example-files/                             # All sample docs that came with extension
 │── .gitignore                                     # Initial commit (Git ignore file)
 │── README.md                                     # Readme file with repo details and this tree
@@ -18,5 +19,5 @@ Data_Stigmatization_of_HomelessIndividuals/
 │── The Role of Race and Mental Illness Diagnosis on Stigmatization of Homeless Individuals.qmd  #  QMD file for final project 
 │── The-Role-of-Race-and-Mental-Illness-Diagnosis-on-Stigmatization-of-Homeless-Individuals.pdf  # PDF for final project
 │── The-Role-of-Race-and-Mental-Illness-Diagnosis-on-Stigmatization-of-Homeless-Individuals.tex  # Assessment MD and PDF test (LaTeX)
-│── research-assessment.md                         # Assessment.md with all objectives for thsi project 
+│── research-assessment.md                         # Assessment.md with all objectives for this project 
 
