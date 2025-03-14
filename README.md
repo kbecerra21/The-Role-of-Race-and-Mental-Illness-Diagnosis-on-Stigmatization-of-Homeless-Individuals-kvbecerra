@@ -4,18 +4,22 @@ This repository contains an R project focused on exploring the stigmatization of
 # Research Question
 How do race and mental illness diagnosis impact the stigmatization of homeless individuals?
 # Purpose for this Repository
-This Project will be use to write up the results of a project that I conducted in my undergraduate institution with the purpose of formulating it into an APA paper that will be sent to Undergraduate professor Dr. Lisa Hayes. Dr. Hayes is planning to us this paper to remind her self of the results as the next face of the project is to look at how participant demographics affected the results. I have included a a small section of this paper to show some initial results. 
+This Project will be use to write up the results of a project that I conducted in my undergraduate institution with the purpose of formulating it into an APA paper that will be sent to Undergraduate professor Dr. Lisa Hayes. Dr. Hayes is planning to us this paper to remind her self of the results as the next face of the project is to look at how participant demographics affected the results. I have included the possible analyis in the qmd found in the data folder. 
 
 # Directory Overview
-# data/
+# The Role of Race and Mental Illness Diagnosis on Stigmatization of Homeless Individuals.qmd/
+QMD file for final project 
+# The-Role-of-Race-and-Mental-Illness-Diagnosis-on-Stigmatization-of-Homeless-Individuals.pdf  
+PDF for final project
+# Data_Stigmatization_of_HomelessIndividuals/
 Contains all data-related files, including the original data set, cleaned data, and cleaning scripts.
 
 
 Data_cleaning_1st_round_Stigmatization_of_homeless_individuals.Rmd: The first round of data cleaning that creates the cleaned_data.csv file.
 
-Data_Cleaning_2.Rmd: The second round of data cleaning, which results in the final_cleaned_data.csv file. This file includes additional objectives not covered in the main QMD.
+Data_Cleaning_2.Rmd: The second round of data cleaning, which results in the final_cleaned_data.csv file.
 
-Final Data leaning.Rmd: Is the file that has the most code and the place where most of the objectives were meet. This file has data cleaning, plotting and additional test that go along with the other hypothesis for this paper that I could not refine  quick enough to include in the qmd. 
+DATA_Cleaning_and_objectives.qmd: Is the file that has the most code and the place where most of the objectives were meet. This file has data cleaning, plotting and additional test that go along with the other hypothesis for this paper that I could not refine  quick enough to include in the qmd. 
 
 Experimental_Study_Karen.csv: The original (uncleaned) data file for the study.
 
@@ -53,8 +57,8 @@ Data_Stigmatization_of_HomelessIndividuals/
 │── data/                                          # Directory for data files
 │   │── cleaning_ Stigmatization of homeless individuals .Rmd # This file has all the cleaning code for this study
 │   │── Data cleaning 1st round_ Stigmatization of homeless individuals .Rmd # has the first round of data cleaning for thsi project it created cleaned_data.csv
-│   │── Data_Cleaning 2.Rmd                         # This file has the second round of data cleaning for this project it created final_cleaned_data.csv Thsi file has the obejctives taht are not on the main qmd
-│   │── Final Data cleaning. Rmd                    # This file has the final round of data cleaning for this project
+│   │── Data_Cleaning 2.Rmd                         # This file has the second round of data cleaning for this project it created final_cleaned_data.csv
+│   │── DATA_Cleaning_and_objectives.qmd:         # Is the file that has the most code and the place where most of the objectives were meet. This file has data cleaning, plotting and additional test that go along with the other hypothesis for this paper that I could not refine  quick enough to include in the qmd. 
 │   │── Experimental_Study_Karen.csv                # The original data file for the study not cleaned
 │   │── SPSS File for Experimental Study Karen.sav  # The original SPSS file for the study not cleaned
 │── _extensions/wjschne/apaquarto/                 # APA Extension for Quarto
