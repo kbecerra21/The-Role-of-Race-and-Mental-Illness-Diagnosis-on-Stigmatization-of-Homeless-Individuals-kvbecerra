@@ -47,9 +47,9 @@ language:
   email: "Email"
   title-block-author-note: "Author Note"
   title-block-correspondence-note: "Correspondence concerning this article should be addressed to"
-  title-block-role-introduction: "Author roles were classified using the Contributor Role Taxonomy (CRediT; [credit.niso.org](https://credit.niso.org)) as follows:"
+  title-block-role-introduction: ~
   title-impact-statement: "Impact Statement"
-  references-meta-analysis: "References marked with an asterisk indicate studies included in the meta-analysis."
+  references-meta-analysis: ~
 format:
   apaquarto-docx: 
     toc: false
@@ -165,7 +165,6 @@ Vignettes Used in the Study
 
 **Note:** All vignettes used the same life story for the male homeless individual, with only race and mental illness varying across conditions.
 
-
 ### Attribution Questionnaire
  The Attribution Questionnaire[@corriganAttributionModelPublic2003] assessed stigmatization aspects like social distance, blame, perceived dangerousness, emotional response, and willingness to help. 
 
@@ -176,7 +175,172 @@ A Memory Check assessed participants' recall of story details, specifically the 
 Demographics questionnaire that asked participants about their age, ethnicity, residence, political affiliation, and familiarity with homelessness.
 
 # Results
-## Main Effect of Diagnosis on Social Distance Stigma
+## Descriptive Statistics
+```{r,echo=TRUE,include=FALSE}
+# Load necessary libraries
+library(readr)
+
+# Read the CSV file
+data <- read_csv("Data_Stigmatization_of HomelessIndividuals/Experimental_Study_Karen.csv")
+
+# View the structure of the data
+str(data)
+```
+
+```{r,echo=TRUE,include=FALSE}
+# Summary statistics for age
+summary(data$age)
+
+# Summary statistics for Distance_mean
+summary(data$Distance_mean)
+
+# Summary statistics for blame_mean
+summary(data$Blamemean)
+
+# Summary statistics for danger_mean
+summary(data$danger_mean)
+
+# Summary statistics for concern_mean
+summary(data$Concern_mean)
+
+# Summary statistics for help_mean
+summary(data$Help_Mean)
+
+```
+
+```{r,echo=TRUE,include=FALSE}
+# Frequency and proportions for gender
+table(data$gender)
+prop.table(table(data$gender))
+
+# Frequency and proportions for ethnicity
+table(data$ethnicity)
+prop.table(table(data$ethnicity))
+
+# Frequency and proportions for political_affiliation
+table(data$political_affiliation)
+prop.table(table(data$political_affiliation))
+
+# Frequency and proportions for community
+table(data$community)
+prop.table(table(data$community))
+
+```
+
+```{r,echo=TRUE,include=FALSE}
+# Summary, mean, median, and frequency for socialdistance_1
+summary(data$socialdistance_1)
+mean(data$socialdistance_1, na.rm = TRUE)
+median(data$socialdistance_1, na.rm = TRUE)
+table(data$socialdistance_1)
+
+# Summary, mean, median, and frequency for blame_1
+summary(data$blame_1)
+mean(data$blame_1, na.rm = TRUE)
+median(data$blame_1, na.rm = TRUE)
+table(data$blame_1)
+
+# Summary, mean, median, and frequency for danger_1
+summary(data$danger_1)
+mean(data$danger_1, na.rm = TRUE)
+median(data$danger_1, na.rm = TRUE)
+table(data$danger_1)
+
+# Summary, mean, median, and frequency for concern_1
+summary(data$concern_1)
+mean(data$concern_1, na.rm = TRUE)
+median(data$concern_1, na.rm = TRUE)
+table(data$concern_1)
+
+# Summary, mean, median, and frequency for help_1
+summary(data$help_1)
+mean(data$help_1, na.rm = TRUE)
+median(data$help_1, na.rm = TRUE)
+table(data$help_1)
+
+```
+
+```{r,echo=TRUE,include=FALSE}
+# Summary statistics results for age
+summary_age <- summary(data$age)
+age_min <- round(summary_age[1], 2)
+age_1st_quartile <- round(summary_age[2], 2)
+age_median <- round(summary_age[3], 2)
+age_mean <- round(summary_age[4], 2)
+age_3rd_quartile <- round(summary_age[5], 2)
+age_max <- round(summary_age[6], 2)
+
+# Summary statistics results for Distance_mean
+summary_distance <- summary(data$Distance_mean)
+distance_min <- round(summary_distance[1], 2)
+distance_1st_quartile <- round(summary_distance[2], 2)
+distance_median <- round(summary_distance[3], 2)
+distance_mean <- round(summary_distance[4], 2)
+distance_3rd_quartile <- round(summary_distance[5], 2)
+distance_max <- round(summary_distance[6], 2)
+
+# Summary statistics results for blame_mean
+summary_blame <- summary(data$Blamemean)
+blame_min <- round(summary_blame[1], 2)
+blame_1st_quartile <- round(summary_blame[2], 2)
+blame_median <- round(summary_blame[3], 2)
+blame_mean <- round(summary_blame[4], 2)
+blame_3rd_quartile <- round(summary_blame[5], 2)
+blame_max <- round(summary_blame[6], 2)
+
+# Summary statistics results for danger_mean
+summary_danger <- summary(data$danger_mean)
+danger_min <- round(summary_danger[1], 2)
+danger_1st_quartile <- round(summary_danger[2], 2)
+danger_median <- round(summary_danger[3], 2)
+danger_mean <- round(summary_danger[4], 2)
+danger_3rd_quartile <- round(summary_danger[5], 2)
+danger_max <- round(summary_danger[6], 2)
+
+# Summary statistics results for concern_mean
+summary_concern <- summary(data$Concern_mean)
+concern_min <- round(summary_concern[1], 2)
+concern_1st_quartile <- round(summary_concern[2], 2)
+concern_median <- round(summary_concern[3], 2)
+concern_mean <- round(summary_concern[4], 2)
+concern_3rd_quartile <- round(summary_concern[5], 2)
+concern_max <- round(summary_concern[6], 2)
+
+# Summary statistics results for help_mean
+summary_help <- summary(data$Help_Mean)
+help_min <- round(summary_help[1], 2)
+help_1st_quartile <- round(summary_help[2], 2)
+help_median <- round(summary_help[3], 2)
+help_mean <- round(summary_help[4], 2)
+help_3rd_quartile <- round(summary_help[5], 2)
+help_max <- round(summary_help[6], 2)
+
+# Results text for manuscript this was super fun to make. I would like to do this more
+cat("
+The summary statistics for the age variable showed a minimum value of", age_min, ", first quartile of", age_1st_quartile, ", median of", age_median, ", mean of", age_mean, ", third quartile of", age_3rd_quartile, ", and a maximum of", age_max, ".\n")
+
+cat("
+For Distance_mean, the minimum value was", distance_min, ", first quartile was", distance_1st_quartile, ", median was", distance_median, ", mean was", distance_mean, ", third quartile was", distance_3rd_quartile, ", and the maximum was", distance_max, ".\n")
+
+cat("
+The Blamemean variable had a minimum value of", blame_min, ", first quartile of", blame_1st_quartile, ", median of", blame_median, ", mean of", blame_mean, ", third quartile of", blame_3rd_quartile, ", and a maximum of", blame_max, ".\n")
+
+cat("
+For danger_mean, the minimum was", danger_min, ", first quartile was", danger_1st_quartile, ", median was", danger_median, ", mean was", danger_mean, ", third quartile was", danger_3rd_quartile, ", and the maximum was", danger_max, ".\n")
+
+cat("
+The concern_mean had a minimum of", concern_min, ", first quartile of", concern_1st_quartile, ", median of", concern_median, ", mean of", concern_mean, ", third quartile of", concern_3rd_quartile, ", and a maximum of", concern_max, ".\n")
+
+cat("
+Finally, for help_mean, the minimum was", help_min, ", first quartile was", help_1st_quartile, ", median was", help_median, ", mean was", help_mean, ", third quartile was", help_3rd_quartile, ", and the maximum was", help_max, ".\n")
+
+```
+We ran some summary statistics for the sample focusing on it was inprtant for us to highlight that our sample was composed of mostly a college age sample despite being open to anyone that wanted to participate. We highlight this as a limiation to our work.For the age showed a minimum value of `r age_min`, a first quartile of `r age_1st_quartile`, a median of `r age_median`, a mean of `r age_mean`, a third quartile of `r age_3rd_quartile`, and a maximum of `r age_max`.
+
+In addtion we ran summary statistics for the variable of social dictance that will be focused in this analysis.For Distance_mean , the minimum value was `r distance_min`, the first quartile was `r distance_1st_quartile`, the median was `r distance_median`, the mean was `r distance_mean`, the third quartile was `r distance_3rd_quartile`, and the maximum was `r distance_max`.The results for this variable are presented in the following section in which an ANOVA was conduected to examine if there were any significant main effects or interactions between race and mental illness diagnosis on social distance stigma.
+
+## Social Distance Stigma
+The ANOVA results show that the main effect of diagnosis on social distance stigma showed a significant effect of diagnosis on social distance stigma, F(1, 211) = `r round(40.31, 2)`, p < .001. However, there was no significant interaction between race and diagnosis on social distance stigma, F(1, 211) = `r round(0.87, 2)`, p = `r round(0.512, 3)`. Similarly, the main effect of race on social distance stigma did not reach significance, F(1, 211) = `r round(0.07, 2)`, p = `r round(0.850, 3)`. **Figure 1** shows the F-values for the main effects and interaction.
 
 ```{r}
 #| label: anova-analysis
@@ -198,9 +362,52 @@ summary(anova_results)
 ```
 
 ```{r}
+#| label: fig-anova-result
+#| fig-cap: ANOVA F-values for Race, Diagnosis, and Their Interaction.
+#| apa-note: The plot shows F-values for each predictor in the ANOVA model. Higher F-values indicate a stronger effect on the dependent variable.
+#| #| echo: FALSE
+#| fig.pos: "H"
+
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+library(tibble)
+
+# Data for plotting
+anova_results <- tibble(
+  Predictor = c("Race (IV1)", "Diagnosis (IV2)", "Race × Diagnosis"),
+  F_Value = c(0.036, 19.930, 0.431),
+  p_Value = c(0.850, 1.31e-05, 0.512)
+)
+
+# Add significance labels
+anova_results <- anova_results %>%
+  mutate(Significance = case_when(
+    p_Value < 0.001 ~ "***",
+    p_Value < 0.01 ~ "**",
+    p_Value < 0.05 ~ "*",
+    TRUE ~ ""
+  ))
+
+# Create bar plot
+ggplot(anova_results, aes(x = Predictor, y = F_Value, fill = Predictor)) +
+  geom_bar(stat = "identity", position = "dodge", color = "black") +
+  geom_text(aes(label = Significance), vjust = -0.5, size = 5) +  # Add significance labels
+  labs(
+    x = "Predictor",
+    y = "F-Value",
+    title = "ANOVA Results for Race, Diagnosis, and Their Interaction"
+  ) +
+  theme_minimal(base_size = 10) +
+  theme(legend.position = "none")
+```
+### Mean Stigma Scores by Diagnosis
+```{r}
 #| label: fig-social-distance-stigma
 #| fig-cap: Effect of Mental Illness Diagnosis on Social Distance Stigma.
 #| apa-note: The plot shows mean social distance stigma scores by diagnosis, with error bars representing standard deviation.
+#| #| echo: FALSE
+#| fig.pos: "H"
 
 # data for plotting
 data <- tibble(
@@ -218,20 +425,16 @@ ggplot(data, aes(x = diagnosis, y = mean_stigma, fill = diagnosis)) +
   theme_minimal(base_size = 10)
 ```
 
-## Mean Stigma Scores by Diagnosis
-Figure 1 shows the effect of mental illness diagnosis on social distance stigma. The mean stigma scores for each diagnosis are as follows:No Diagnosis: `r data$mean_stigma[1]` (SD = `r data$sd_stigma[1]`), Schizophrenia: `r data$mean_stigma[2]` (SD = `r data$sd_stigma[2]`),Substance Use Disorder: `r data$mean_stigma[3]` (SD = `r data$sd_stigma[3]`)
+**Figure 2** shows the effect of mental illness diagnosis on social distance stigma. The mean stigma scores for each diagnosis are as follows:No Diagnosis: `r data$mean_stigma[1]` (SD = `r data$sd_stigma[1]`), Schizophrenia: `r data$mean_stigma[2]` (SD = `r data$sd_stigma[2]`),Substance Use Disorder: `r data$mean_stigma[3]` (SD = `r data$sd_stigma[3]`)
 
-The results indicate that individuals with schizophrenia (M = `r data$mean_stigma[2]`) and substance use disorder (M = `r data$mean_stigma[3]`) experience higher levels of social distance stigma compared to those with no diagnosis (M = `r data$mean_stigma[1]`). However, these differences were not statistically significant.
+The results indicate that individuals with schizophrenia (M = `r data$mean_stigma[2]`) and substance use disorder (M = `r data$mean_stigma[3]`) experience higher levels of social distance stigma compared to those with no diagnosis (M = `r data$mean_stigma[1]`). These differences were statistically significant.
 
 # Discussion
+This study explored how race and mental illness diagnosis impact the stigmatization of homeless individuals, specifically focusing on social distance. The results revealed that race did not significantly affect social distance stigma, suggesting that race was not a key factor in determining social distance in this context. However, the diagnosis of mental illness had a significant impact on social distance. Individuals with schizophrenia and substance use disorder were perceived as more socially distant than those with no diagnosis, supporting the hypothesis that mental illness contributes to higher levels of social distance stigma.
 
-This study examined the role of race and mental illness diagnosis in the stigmatization of homeless individuals, using the Attribution Questionnaire to measure social distance, blame, dangerousness, concern, and willingness to help. We hypothesized that race would significantly impact all aspects of stigmatization, with Black homeless individuals receiving more negative perceptions. However, none of these predictions were supported, as race did not significantly affect the levels of stigmatization. These findings align with some previous studies but contradict others, particularly regarding perceived dangerousness, where Black individuals were not viewed as more dangerous than White individuals.
+The absence of a significant interaction between race and diagnosis further highlights that mental illness plays a larger role in shaping social distance perceptions than race. This finding suggests that, when it comes to social distance, mental illness may be a more prominent factor than race in the stigmatization of homeless individuals.
 
-Regarding mental illness, we predicted that substance use disorders would result in higher social distance, dangerousness, and blame, while schizophrenia would lead to more concern and help. While there was no significant effect for help and concern, individuals with schizophrenia were perceived as more dangerous and socially distant, contrary to prior research. Substance use disorder diagnosis was associated with higher levels of blame, suggesting a stronger stigmatization of this group.
-
-Regarding interactions between race and mental illness, we predicted that Black homeless individuals with substance use disorders would receive the highest levels of stigma. However, no significant interaction was found. These results suggest that mental illness diagnosis plays a larger role in stigmatization than race.
-
-The study had limitations, including an online format that may have influenced responses due to social pressure, and a sample largely composed of college-aged students and liberals, which could affect the generalizability of the findings. Future research should include a more diverse sample and consider factors such as desirability and response truthfulness.
+These findings underscore the importance of addressing mental illness as a key determinant in social stigma, particularly in the context of homelessness. Further research is needed to explore how these factors interact in other forms of stigmatization and to investigate the role of mental illness across different populations.
 
 # References
 
