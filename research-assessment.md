@@ -152,7 +152,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
         -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
-        In data cleaning 2 rmarkdown file used to clean data further 
+        In data qmd 
 
 7.  Parse and define functions and arguments
 
@@ -163,7 +163,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
         -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
-        In data cleaning 2 rmarkdown file used to clean data further
+        In data qmd
 
 8.  Parse and write conditional statements and/or loops
 
@@ -173,7 +173,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
         -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
-        In data cleaning 2 rmarkdown file used to clean data further
+        In data qmd
 
 9.  Use `readr` functions to read in and write out data
 
@@ -194,7 +194,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
         -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
-        final_data_cleaning.rmd file has this infomation 
+        data qmd file has this infomation 
 
 11. Use `stringr` functions to work with string variables
 
@@ -215,6 +215,7 @@ final_data_cleaning.rmd file has this infomation
         -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
+        in data qmd file
 
 ### Data visualization with ggplot2
 
@@ -226,7 +227,7 @@ final_data_cleaning.rmd file has this infomation
         -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
-        some in qmd for this projects and some in final_data_cleaning.rmd file
+        some in qmd for this projects and some in data qmd file
 
 14. Use dynamic aesthetics to group data
 
@@ -235,7 +236,7 @@ final_data_cleaning.rmd file has this infomation
         -   [x ] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
-        some in qmd for this projects and some in final_data_cleaning.rmd file
+        some in qmd for this projects and some in data qmd file
         
 15. Use facets to create parallel plots
 
@@ -248,7 +249,7 @@ final_data_cleaning.rmd file has this infomation
         -   [x ] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
-        final_data_cleaning.rmd file has this infomation
+        data qmd file has this infomation
 16. Create publication-quality plots using `theme` and `labs` layers
 
     1. Plots have informative titles, axis labels, and legends
@@ -259,7 +260,7 @@ final_data_cleaning.rmd file has this infomation
         -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
-    final_data_cleaning.rmd file has this infomation
+    some in qmd for project some in data qmd  file has this infomation
 
 ### Data analysis
 
@@ -273,7 +274,7 @@ final_data_cleaning.rmd file has this infomation
         -   [x ] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
-        some in qmd for this projects and some in final_data_cleaning.rmd file
+        some in qmd for this projects and some in data qmd
 
 18. Perform simple hypothesis testing analyses for multiple data types
 
@@ -285,7 +286,7 @@ final_data_cleaning.rmd file has this infomation
         -   [ ] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
-        some in qmd for this projects and some in final_data_cleaning.rmd file
+        some in qmd for this projects and some in data qmd file
 
 19. Present and interpret statistics in manuscript narrative
 

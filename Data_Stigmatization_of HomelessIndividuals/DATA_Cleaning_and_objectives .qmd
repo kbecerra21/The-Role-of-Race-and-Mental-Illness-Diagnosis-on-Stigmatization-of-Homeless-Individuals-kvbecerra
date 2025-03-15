@@ -1,5 +1,328 @@
 ---
 title: "DATA_Cleaning_and_objectives "
-format: html
 ---
+# DATA Cleaning
+I will use this document to clean the data for this project
+#Data Cleaning steps 
+```{r}
+#Loading data and setting seed
+```{r}
+#| label: setup
+library(tidyverse)
+set.seed(1234)
+```
+
+```{r}
+
+#| label: read- messy- data for project 
+
+# Read in messy-midwest.csv with read_csv(). I folled the mini project instructions this was extremly helful when completeing this task.
+messy.stigma <- read_csv("Data_Stigmatization_of HomelessIndividuals/Experimental_Study_Karen.csv")
+
+  trim_ws = FALSE, name_repair = "minimal", col_types = cols(.default = col_character()))
+
+# Inspect the structure and contents of the messy midwest dataset with head(), glimpse(), str(), and/or View()
+head(messy.stigma)
+glimpse(messy.stigma)
+str(messy.stigma)
+View(messy.stigma)
+
+```
+# what I see in the data
+All the data is numerical and should not be. The labels for the data columns should be clearer and more descriptive.there is no distiniction between partipant demographics and the data collected.also have to make labels more consistent
+## listing and organizaing the data. what were the variables and what do they represent 
+```{r}
+variable_names <- c(
+  "IV1_race", "IV2_diagnosis", "condition", 
+  "socialdistance_1", "socialdistance_2", "socialdistance_3",
+  "blame_1", "blame_2", "blame_3", 
+  "danger_1", "danger_2", "danger_3",
+  "concern_1", "concern_2", "concern_3",
+  "help_1", "help_2",
+  "social_desirability",
+  "memorycheck_race", "memorycheck_diagnosis",
+  "gender", "age", "ethnicity", "political_affiliation", "homeless_familiarity"
+)
+
+descriptions <- c(
+  "Participant's race condition in the vignette (1 = White, 2 = Black) [Nominal]",
+  "Mental illness condition in the vignette (0 = No diagnosis, 1 = Substance use disorder, 2 = Schizophrenia) [Nominal]",
+  "Experimental condition assigned (1–6 representing race x diagnosis combination) [Nominal]",
+  
+  "Social distance measure (higher = greater distance) - Item 1: 'How willing would you be to have Michael live in your community?' (1 = Completely unwilling to 7 = Completely willing) [Ordinal]",
+  "Social distance measure (higher = greater distance) - Item 2 (1 = Completely unwilling to 7 = Completely willing) [Ordinal]",
+  "Social distance measure (higher = greater distance) - Item 3 (1 = Completely unwilling to 7 = Completely willing) [Ordinal]",
+  
+  "Blame attribution score - Item 1: 'Do you think Michael is responsible for his situation?' (1 = Definitely No to 7 = Definitely Yes) [Ordinal]",
+  "Blame attribution score - Item 2 (1 = Definitely No to 7 = Definitely Yes) [Ordinal]",
+  "Blame attribution score - Item 3 (reverse-coded) (1 = Definitely No to 7 = Definitely Yes) [Ordinal]",
+  
+  "Perceived danger score - Item 1: 'Do you think Michael would be a danger to the community?' (1 = Definitely No to 7 = Definitely Yes) [Ordinal]",
+  "Perceived danger score - Item 2 (1 = Definitely No to 7 = Definitely Yes) [Ordinal]",
+  "Perceived danger score - Item 3 (1 = Definitely No to 7 = Definitely Yes) [Ordinal]",
+  
+  "Level of concern for the target (higher = less concern, more stigma) - Item 1: 'How much concern would you feel for Michael?' (1 = None at all to 7 = Very much) [Ordinal]",
+  "Level of concern for the target (higher = less concern, more stigma) - Item 2 (1 = None at all to 7 = Very much) [Ordinal]",
+  "Level of concern for the target (higher = less concern, more stigma) - Item 3 (1 = None at all to 7 = Very much) [Ordinal]",
+  
+  "Willingness to help score (higher = lower willingness, more stigma) - Item 1: 'How likely is it that you would talk to Michael if you saw him in the park?' (1 = Not likely at all to 7 = Very likely) [Ordinal]",
+  "Willingness to help score (higher = lower willingness, more stigma) - Item 2 (1 = Not likely at all to 7 = Very likely) [Ordinal]",
+  
+  "Social desirability score (higher = greater tendency to respond in socially desirable ways) - Measured using the Marlowe-Crowne Social Desirability Scale (Reynolds, 1982). Example item: 'I’m always willing to admit when I make a mistake.' (0-13 scale) [Interval]",
+  
+  "Memory check: Recall of Michael's race/ethnicity (1 = Correct, 0 = Incorrect) [Nominal]",
+  "Memory check: Recall of Michael's mental illness diagnosis (1 = Correct, 0 = Incorrect) [Nominal]",
+  
+  "Participant's gender (1 = Male, 2 = Female, 3 = Non-binary, 4 = Other) [Nominal]",
+  "Participant's age in years (Open-ended numeric response) [Ratio]",
+  "Participant's ethnicity (1 = Hispanic, 2 = Black, 3 = White, etc.) [Nominal]",
+  "Political affiliation (1 = Conservative, 2 = Liberal, 3 = Moderate, etc.) [Nominal]",
+  "Familiarity with homelessness (1 = Yes, 0 = No). Example: 'Have you ever observed, in passing, a person you believed to be homeless?' [Nominal]"
+)
+
+data_dictionary <- data.frame(Variable = variable_names, Description = descriptions)
+print(data_dictionary)
+
+```
+# Making a clean data 
+```{r}
+#| label: make-cleaning-dataset
+
+# Create a dataset to work with during the cleaning process
+messy.stigma_cleaned <- messy.stigma
+```
+
+```{r}
+#| label: inspect-column-names
+
+# Check the names and order of columns in messy.midwest 
+colnames(messy.stigma)
+# Check the names and order of columns in midwest:
+colnames(messy.stigma)
+# Check the names and order of columns in messy.midwest_cleaned:
+colnames(messy.stigma _cleaned)
+```
+
+```{r}
+#| label: setup
+library(tidyverse)
+set.seed(1234)
+```
+
+```{r}
+# Select specific columns, rename them, and reorder if necessary
+#only certain columns needed fixing 
+messy.stigma_cleaned <- messy.stigma %>%
+rename(Race_Condition = `IV1_race`, 
+         Diagnosis_Condition = `IV2_diagnosis`, 
+         Condition_Type = `condition`, 
+         Social_Distance_Score_1 = `socialdistance_1`, 
+         Social_Distance_Score_2 = `socialdistance_2`, 
+         Social_Distance_Score_3 = `socialdistance_3`, 
+         Blame_Attribution_1 = `blame_1`, 
+         Blame_Attribution_2 = `blame_2`, 
+         Blame_Attribution_3 = `blame_3`, 
+         Perceived_Danger_1 = `danger_1`, 
+         Perceived_Danger_2 = `danger_2`, 
+         Perceived_Danger_3 = `danger_3`, 
+         Concern_About_Impact_1 = `concern_1`, 
+         Concern_About_Impact_2 = `concern_2`, 
+         Concern_About_Impact_3 = `concern_3`, 
+         Help_Offering_1 = `help_1`, 
+         Help_Offering_2 = `help_2`, 
+         Gender_Participant = `gender`, 
+         Age_of_Participant = `age`, 
+         Ethnicity_Participant = `ethnicity`, 
+         Community_Type = `community`, 
+         Political_Affiliation = `political_affiliation`, 
+         Previous_Contact_with_Homeless_Population = `contact_homeless`, 
+         Social_Desirability_Bias = `social_desirability`, 
+         Reverse_Social_Distance_1 = `socialdistanceR1`, 
+         Reverse_Social_Distance_2 = `socialdistanceR2`, 
+         Reverse_Social_Distance_3 = `socialdistanceR3`, 
+         Mean_Social_Distance = `Distance_mean`, 
+         Reverse_Blaming_3 = `blameR3`, 
+         Mean_Blaming_Attribution = `Blamemean`, 
+         Mean_Perceived_Danger = `danger_mean`, 
+         Reverse_Concern_1 = `concernR1`, 
+         Reverse_Concern_2 = `ConcernR2`, 
+         Reverse_Concern_3 = `ConcernR3`, 
+         Mean_Concern_About_Impact = `Concern_mean`, 
+         Reverse_Help_Offering_1 = `helpR1`, 
+         Reverse_Help_Offering_2 = `helpR2`, 
+         Mean_Help_Offering = `Help_Mean`)
+```
+
+## Changing data names
+```{r}
+# check current changes 
+head(messy.stigma_cleaned)
+colnames(messy.stigma_cleaned) # names were clearer and made more sense 
+```
+# changing the data types
+```{r}
+# Check current data types
+str(messy.stigma)
+```
+
+```{r}
+# Changing column types 
+messy.stigma_cleaned <- messy.stigma_cleaned %>%
+mutate(
+    Race_Condition = as.factor(Race_Condition),
+    Diagnosis_Condition = as.factor(Diagnosis_Condition),
+    Condition_Type = as.factor(Condition_Type),
+    Social_Distance_Score_1 = as.numeric(Social_Distance_Score_1),
+    Social_Distance_Score_2 = as.numeric(Social_Distance_Score_2),
+    Social_Distance_Score_3 = as.numeric(Social_Distance_Score_3),
+    Blame_Attribution_1 = as.numeric(Blame_Attribution_1),
+    Blame_Attribution_2 = as.numeric(Blame_Attribution_2),
+    Blame_Attribution_3 = as.numeric(Blame_Attribution_3),
+    Perceived_Danger_1 = as.numeric(Perceived_Danger_1),
+    Perceived_Danger_2 = as.numeric(Perceived_Danger_2),
+    Perceived_Danger_3 = as.numeric(Perceived_Danger_3),
+    Concern_About_Impact_1 = as.numeric(Concern_About_Impact_1),
+    Concern_About_Impact_2 = as.numeric(Concern_About_Impact_2),
+    Concern_About_Impact_3 = as.numeric(Concern_About_Impact_3),
+    Help_Offering_1 = as.numeric(Help_Offering_1),
+    Help_Offering_2 = as.numeric(Help_Offering_2),
+    Gender_Participant = as.factor(Gender_Participant),
+    Age_of_Participant = as.numeric(Age_of_Participant),
+    Ethnicity_Participant = as.factor(Ethnicity_Participant),
+    Community_Type = as.factor(Community_Type),
+    Political_Affiliation = as.factor(Political_Affiliation),
+    Previous_Contact_with_Homeless_Population = as.factor(Previous_Contact_with_Homeless_Population),
+    Social_Desirability_Bias = as.numeric(Social_Desirability_Bias),
+    Reverse_Social_Distance_1 = as.numeric(Reverse_Social_Distance_1),
+    Reverse_Social_Distance_2 = as.numeric(Reverse_Social_Distance_2),
+    Reverse_Social_Distance_3 = as.numeric(Reverse_Social_Distance_3),
+    Mean_Social_Distance = as.numeric(Mean_Social_Distance),
+    Reverse_Blaming_3 = as.numeric(Reverse_Blaming_3),
+    Mean_Blaming_Attribution = as.numeric(Mean_Blaming_Attribution),
+    Mean_Perceived_Danger = as.numeric(Mean_Perceived_Danger),
+    Reverse_Concern_1 = as.numeric(Reverse_Concern_1),
+    Reverse_Concern_2 = as.numeric(Reverse_Concern_2),
+    Reverse_Concern_3 = as.numeric(Reverse_Concern_3),
+    Mean_Concern_About_Impact = as.numeric(Mean_Concern_About_Impact),
+    Reverse_Help_Offering_1 = as.numeric(Reverse_Help_Offering_1),
+    Reverse_Help_Offering_2 = as.numeric(Reverse_Help_Offering_2),
+    Mean_Help_Offering = as.numeric(Mean_Help_Offering)
+  )
+
+# Check the data structure again to confirm changes
+str(messy.stigma_cleaned)
+```
+
+#deleting data that is missing 
+```{r}
+#| label: other-cleaning
+messy.stigma_cleaned <- messy.stigma_cleaned %>%
+  drop_na() # remove rows with missing values
+```
+#removed any duplicated rows
+```{r}
+messy.stigma_cleaned <- messy.stigma_cleaned %>%
+distinct() # removed any duplicated rows 
+```
+
+# Pipeline for cleaning data
+```{r}
+#| label: setup
+library(tidyverse)
+set.seed(1234)
+
+# Create a cleaned dataset from the original dataset
+messy.stigma_cleaned <- messy.stigma %>%
+  # Rename columns for clarity
+  rename(Race_Condition = `IV1_race`, 
+         Diagnosis_Condition = `IV2_diagnosis`, 
+         Condition_Type = `condition`, 
+         Social_Distance_Score_1 = `socialdistance_1`, 
+         Social_Distance_Score_2 = `socialdistance_2`, 
+         Social_Distance_Score_3 = `socialdistance_3`, 
+         Blame_Attribution_1 = `blame_1`, 
+         Blame_Attribution_2 = `blame_2`, 
+         Blame_Attribution_3 = `blame_3`, 
+         Perceived_Danger_1 = `danger_1`, 
+         Perceived_Danger_2 = `danger_2`, 
+         Perceived_Danger_3 = `danger_3`, 
+         Concern_About_Impact_1 = `concern_1`, 
+         Concern_About_Impact_2 = `concern_2`, 
+         Concern_About_Impact_3 = `concern_3`, 
+         Help_Offering_1 = `help_1`, 
+         Help_Offering_2 = `help_2`, 
+         Gender_Participant = `gender`, 
+         Age_of_Participant = `age`, 
+         Ethnicity_Participant = `ethnicity`, 
+         Community_Type = `community`, 
+         Political_Affiliation = `political_affiliation`, 
+         Previous_Contact_with_Homeless_Population = `contact_homeless`, 
+         Social_Desirability_Bias = `social_desirability`, 
+         Reverse_Social_Distance_1 = `socialdistanceR1`, 
+         Reverse_Social_Distance_2 = `socialdistanceR2`, 
+         Reverse_Social_Distance_3 = `socialdistanceR3`, 
+         Mean_Social_Distance = `Distance_mean`, 
+         Reverse_Blaming_3 = `blameR3`, 
+         Mean_Blaming_Attribution = `Blamemean`, 
+         Mean_Perceived_Danger = `danger_mean`, 
+         Reverse_Concern_1 = `concernR1`, 
+         Reverse_Concern_2 = `ConcernR2`, 
+         Reverse_Concern_3 = `ConcernR3`, 
+         Mean_Concern_About_Impact = `Concern_mean`, 
+         Reverse_Help_Offering_1 = `helpR1`, 
+         Reverse_Help_Offering_2 = `helpR2`, 
+         Mean_Help_Offering = `Help_Mean`) %>%
+  # Change column types
+  mutate(
+    Race_Condition = as.factor(Race_Condition),
+    Diagnosis_Condition = as.factor(Diagnosis_Condition),
+    Condition_Type = as.factor(Condition_Type),
+    Social_Distance_Score_1 = as.numeric(Social_Distance_Score_1),
+    Social_Distance_Score_2 = as.numeric(Social_Distance_Score_2),
+    Social_Distance_Score_3 = as.numeric(Social_Distance_Score_3),
+    Blame_Attribution_1 = as.numeric(Blame_Attribution_1),
+    Blame_Attribution_2 = as.numeric(Blame_Attribution_2),
+    Blame_Attribution_3 = as.numeric(Blame_Attribution_3),
+    Perceived_Danger_1 = as.numeric(Perceived_Danger_1),
+    Perceived_Danger_2 = as.numeric(Perceived_Danger_2),
+    Perceived_Danger_3 = as.numeric(Perceived_Danger_3),
+    Concern_About_Impact_1 = as.numeric(Concern_About_Impact_1),
+    Concern_About_Impact_2 = as.numeric(Concern_About_Impact_2),
+    Concern_About_Impact_3 = as.numeric(Concern_About_Impact_3),
+    Help_Offering_1 = as.numeric(Help_Offering_1),
+    Help_Offering_2 = as.numeric(Help_Offering_2),
+    Gender_Participant = as.factor(Gender_Participant),
+    Age_of_Participant = as.numeric(Age_of_Participant),
+    Ethnicity_Participant = as.factor(Ethnicity_Participant),
+    Community_Type = as.factor(Community_Type),
+    Political_Affiliation = as.factor(Political_Affiliation),
+    Previous_Contact_with_Homeless_Population = as.factor(Previous_Contact_with_Homeless_Population),
+    Social_Desirability_Bias = as.numeric(Social_Desirability_Bias),
+    Reverse_Social_Distance_1 = as.numeric(Reverse_Social_Distance_1),
+    Reverse_Social_Distance_2 = as.numeric(Reverse_Social_Distance_2),
+    Reverse_Social_Distance_3 = as.numeric(Reverse_Social_Distance_3),
+    Mean_Social_Distance = as.numeric(Mean_Social_Distance),
+    Reverse_Blaming_3 = as.numeric(Reverse_Blaming_3),
+    Mean_Blaming_Attribution = as.numeric(Mean_Blaming_Attribution),
+    Mean_Perceived_Danger = as.numeric(Mean_Perceived_Danger),
+    Reverse_Concern_1 = as.numeric(Reverse_Concern_1),
+    Reverse_Concern_2 = as.numeric(Reverse_Concern_2),
+    Reverse_Concern_3 = as.numeric(Reverse_Concern_3),
+    Mean_Concern_About_Impact = as.numeric(Mean_Concern_About_Impact),
+    Reverse_Help_Offering_1 = as.numeric(Reverse_Help_Offering_1),
+    Reverse_Help_Offering_2 = as.numeric(Reverse_Help_Offering_2),
+    Mean_Help_Offering = as.numeric(Mean_Help_Offering)
+  ) %>%
+  # Remove rows with missing values
+  drop_na() %>%
+  # Remove duplicated rows
+  distinct()
+
+# Write the cleaned dataset to a CSV file
+write.csv(messy.stigma_cleaned, "cleaned_stigma_data.csv", row.names = FALSE)
+
+# Check the final cleaned dataset
+str(messy.stigma_cleaned)
+
+```
 
