@@ -22,6 +22,7 @@ Data_Cleaning_2.Rmd: The second round of data cleaning, which results in the fin
 DATA_Cleaning_and_objectives.qmd: Is the file that has the most code and the place where most of the objectives were meet. This file has data cleaning, plotting and additional test that go along with the other hypothesis for this paper that I could not refine  quick enough to include in the qmd. 
 
 Experimental_Study_Karen.csv: The original (uncleaned) data file for the study.
+cleaned_stigma_data.csv: The cleaned data file for the study.
 
 SPSS_File_for_Experimental_Study_Karen.sav: The original SPSS file for the study, uncleaned.
 
@@ -61,6 +62,7 @@ Data_Stigmatization_of_HomelessIndividuals/
 │   │── DATA_Cleaning_and_objectives.qmd:         # Is the file that has the most code and the place where most of the objectives were meet. This file has data cleaning, plotting and additional test that go along with the other hypothesis for this paper that I could not refine  quick enough to include in the qmd. 
 │   │── Experimental_Study_Karen.csv                # The original data file for the study not cleaned
 │   │── SPSS File for Experimental Study Karen.sav  # The original SPSS file for the study not cleaned
+|   |── cleaned_stigma_data.csv                     # The cleaned data file for the study
 │── _extensions/wjschne/apaquarto/                 # APA Extension for Quarto
 |── Stigmatization.bib                             # Bibliography file for the study
 │── all-example-files/                             # All sample docs that came with extension
