@@ -25,7 +25,7 @@ Experimental_Study_Karen.csv: The original (uncleaned) data file for the study.
 cleaned_stigma_data.csv: The cleaned data file for the study.
 
 SPSS_File_for_Experimental_Study_Karen.sav: The original SPSS file for the study, uncleaned.
-
+cleaned_stigma_data.csv: The cleaned data file for the study.
 #  _extensions/wjschne/apaquarto/
 Contains the APA extension for Quarto to format the final report according to APA style.
 
