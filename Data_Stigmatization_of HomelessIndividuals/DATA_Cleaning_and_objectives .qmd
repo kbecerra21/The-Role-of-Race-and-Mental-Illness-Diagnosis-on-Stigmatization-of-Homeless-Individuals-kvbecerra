@@ -326,3 +326,134 @@ str(messy.stigma_cleaned)
 
 ```
 
+# Data Analysis futher steps 
+```{r}
+# Load necessary libraries
+library(dplyr)
+
+# Load the dataset
+data <- read.csv("Data_Stigmatization_of HomelessIndividuals/cleaned_stigma_data.csv")
+
+# Convert relevant variables to factors or numeric
+data <- data %>%
+  mutate(
+    Ethnicity_Participant = as.factor(Ethnicity_Participant),
+    Diagnosis_Condition = as.factor(Diagnosis_Condition),
+    Condition_Type = as.factor(Condition_Type),
+    Social_Distance_Score_1 = as.numeric(Social_Distance_Score_1),
+    Social_Distance_Score_2 = as.numeric(Social_Distance_Score_2),
+    Social_Distance_Score_3 = as.numeric(Social_Distance_Score_3),
+    Blame_Attribution_1 = as.numeric(Blame_Attribution_1),
+    Blame_Attribution_2 = as.numeric(Blame_Attribution_2),
+    Blame_Attribution_3 = as.numeric(Blame_Attribution_3),
+    Perceived_Danger_1 = as.numeric(Perceived_Danger_1),
+    Perceived_Danger_2 = as.numeric(Perceived_Danger_2),
+    Perceived_Danger_3 = as.numeric(Perceived_Danger_3),
+    Concern_About_Impact_1 = as.numeric(Concern_About_Impact_1),
+    Concern_About_Impact_2 = as.numeric(Concern_About_Impact_2),
+    Concern_About_Impact_3 = as.numeric(Concern_About_Impact_3),
+    Help_Offering_1 = as.numeric(Help_Offering_1),
+    Help_Offering_2 = as.numeric(Help_Offering_2),
+    Gender_Participant = as.factor(Gender_Participant),
+    Age_of_Participant = as.numeric(Age_of_Participant),
+    Community_Type = as.factor(Community_Type),
+    Political_Affiliation = as.factor(Political_Affiliation),
+    Previous_Contact_with_Homeless_Population = as.factor(Previous_Contact_with_Homeless_Population),
+    Social_Desirability_Bias = as.numeric(Social_Desirability_Bias),
+    Reverse_Social_Distance_1 = as.numeric(Reverse_Social_Distance_1),
+    Reverse_Social_Distance_2 = as.numeric(Reverse_Social_Distance_2),
+    Reverse_Social_Distance_3 = as.numeric(Reverse_Social_Distance_3),
+    Mean_Social_Distance = as.numeric(Mean_Social_Distance),
+    Reverse_Blaming_3 = as.numeric(Reverse_Blaming_3),
+    Mean_Blaming_Attribution = as.numeric(Mean_Blaming_Attribution),
+    Mean_Perceived_Danger = as.numeric(Mean_Perceived_Danger),
+    Reverse_Concern_1 = as.numeric(Reverse_Concern_1),
+    Reverse_Concern_2 = as.numeric(Reverse_Concern_2),
+    Reverse_Concern_3 = as.numeric(Reverse_Concern_3),
+    Mean_Concern_About_Impact = as.numeric(Mean_Concern_About_Impact),
+    Reverse_Help_Offering_1 = as.numeric(Reverse_Help_Offering_1),
+    Reverse_Help_Offering_2 = as.numeric(Reverse_Help_Offering_2),
+    Mean_Help_Offering = as.numeric(Mean_Help_Offering)
+  )
+
+# Running ANOVAs for each scale score with different demographic variables
+
+# Social Distance Scores
+anova_SD1 <- aov(Social_Distance_Score_1 ~ Ethnicity_Participant, data = data)
+summary(anova_SD1)
+
+anova_SD2 <- aov(Social_Distance_Score_2 ~ Diagnosis_Condition, data = data)
+summary(anova_SD2)
+
+anova_SD3 <- aov(Social_Distance_Score_3 ~ Condition_Type, data = data)
+summary(anova_SD3)
+
+# Blame Attribution
+anova_BA1 <- aov(Blame_Attribution_1 ~ Gender_Participant, data = data)
+summary(anova_BA1)
+
+anova_BA2 <- aov(Blame_Attribution_2 ~ Ethnicity_Participant, data = data)
+summary(anova_BA2)
+
+# Perceived Danger
+anova_PD1 <- aov(Perceived_Danger_1 ~ Age_of_Participant, data = data)
+summary(anova_PD1)
+
+anova_PD2 <- aov(Perceived_Danger_2 ~ Community_Type, data = data)
+summary(anova_PD2)
+
+# Concern About Impact
+anova_Concern1 <- aov(Concern_About_Impact_1 ~ Political_Affiliation, data = data)
+summary(anova_Concern1)
+
+anova_Concern2 <- aov(Concern_About_Impact_2 ~ Previous_Contact_with_Homeless_Population, data = data)
+summary(anova_Concern2)
+
+# Help Offering
+anova_Help1 <- aov(Help_Offering_1 ~ Social_Desirability_Bias, data = data)
+summary(anova_Help1)
+
+anova_Help2 <- aov(Help_Offering_2 ~ Gender_Participant, data = data)
+summary(anova_Help2)
+
+# Mean Social Distance
+anova_Mean_SD <- aov(Mean_Social_Distance ~ Ethnicity_Participant, data = data)
+summary(anova_Mean_SD)
+
+# Mean Blaming Attribution
+anova_Mean_BA <- aov(Mean_Blaming_Attribution ~ Ethnicity_Participant, data = data)
+summary(anova_Mean_BA)
+
+# Mean Perceived Danger
+anova_Mean_PD <- aov(Mean_Perceived_Danger ~ Community_Type, data = data)
+summary(anova_Mean_PD)
+
+# Mean Concern About Impact
+anova_Mean_Concern <- aov(Mean_Concern_About_Impact ~ Political_Affiliation, data = data)
+summary(anova_Mean_Concern)
+
+# Mean Help Offering
+anova_Mean_Help <- aov(Mean_Help_Offering ~ Previous_Contact_with_Homeless_Population, data = data)
+summary(anova_Mean_Help)
+
+# Check assumptions of ANOVA
+par(mfrow=c(2,2))
+plot(anova_Mean_SD)
+plot(anova_Mean_BA)
+plot(anova_Mean_PD)
+plot(anova_Mean_Concern)
+```
+
+# R Markdown
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+
+```
+
+```{r}
+anova_SD1 <- aov(Social_Distance_Score_1 ~ Ethnicity_Participant, data = data)
+summary(anova_SD1)
+
+```
+
