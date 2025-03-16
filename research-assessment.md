@@ -100,8 +100,9 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3.  Does not have duplicate/redundant elements
 
         -   [ x] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments: 
+            - remove any files not necessary for the project (e.g. example files)
 
 2.  Maintain an informative and up-to-date README.md
 
@@ -109,7 +110,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2.  Outlines the repo structure with file tree or similar
 
         -   [x ] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
 
 3.  integrate a GitHub repo with an R studio project, including .gitignore file
@@ -120,6 +121,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
         -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
+            - .gitignore should include (minimally) a localonly folder and pdf render files (e.g., the *_files folder, .ttt, .tex., .log, etc.), as well as comments describing the ignored items (in addition to the default ignored items if you’re using a template)
 
 4.  effectively use version control
 
@@ -127,8 +129,8 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2.  Relies on document revisions rather than manually created new versions
 
         -   [ x] Objective attempt
-        -   [ ] Objective met
-        -   Grader comments:
+        -   [x] Objective met
+        -   Grader comments: I know this was a monumental hurdle at the end, and you really handled it well. I'm so impressed with what you were able to recover
 
 ### R programming
 
@@ -140,7 +142,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Uses more than one function to install/load/require packages (including those used in commented code)
 
         -   [ x] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
         In data cleaning 2 rmarkdown file but also in qmd 
         
@@ -150,7 +152,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Uses multiple operators in data transformation pipelines and/or inline R code
 
         -   [ x] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
         In data qmd 
 
@@ -161,7 +163,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3. Functions are well-documented with comments
 
         -   [ x] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
         In data qmd
 
@@ -171,7 +173,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     2. Uses multiple types of conditional/loop functions (e.g., `if_else()`, `case_when()`, `for`, `while`)
 
         -   [ x] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
         In data qmd
 
@@ -182,7 +184,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3. Uses only relative paths that run without error when repo is cloned
 
         -   [ x] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
 
 10. Use `dplyr` and `tidyr` functions to transform data
@@ -192,7 +194,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
     3. Combines `dplyr` and `tidyr` functions in a data transformation pipeline
 
         -   [ x] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
         data qmd file has this infomation 
 
@@ -204,6 +206,7 @@ Refer to the website for general tips on meeting these objectives and an FAQ.
         -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
+            - only 1: str_detect() 
         
 final_data_cleaning.rmd file has this infomation
 12. Use `forcats` functions to work with factor variables
@@ -213,7 +216,7 @@ final_data_cleaning.rmd file has this infomation
     - NOTE: Though they are base R functions, `factor()` and `levels()` can be used to meet this objective as long as they are used in a way that demonstrates the same skills as `forcats` functions, which should involve including optional arguments
 
         -   [ x] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
         in data qmd file
 
@@ -225,7 +228,7 @@ final_data_cleaning.rmd file has this infomation
     2. At least one plot is multi-variable
 
         -   [ x] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
         some in qmd for this projects and some in data qmd file
 
@@ -234,7 +237,7 @@ final_data_cleaning.rmd file has this infomation
     1. Uses at least 2 unique data-mapped `aes()` arguments (e.g., color, shape, size) to group data in a plot in one or multiple plots
 
         -   [x ] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
         some in qmd for this projects and some in data qmd file
         
@@ -247,9 +250,10 @@ final_data_cleaning.rmd file has this infomation
       1. If data only includes 1 sensible grouping variable, it may be used for both the faceting and groupin aes.  
 
         -   [x ] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
         data qmd file has this infomation
+        
 16. Create publication-quality plots using `theme` and `labs` layers
 
     1. Plots have informative titles, axis labels, and legends
@@ -259,8 +263,11 @@ final_data_cleaning.rmd file has this infomation
 
         -   [ x] Objective attempt
         -   [ ] Objective met
-        -   Grader comments:
-    some in qmd for project some in data qmd  file has this infomation
+        -   Grader comments: some in qmd for project some in data qmd  file has this infomation
+            - Some text not plain English and formatted 
+            - x-axis text is very small
+            - figures are too large - 50% of the height MAX
+        
 
 ### Data analysis
 
@@ -272,7 +279,7 @@ final_data_cleaning.rmd file has this infomation
     - NOTE: This objective may be met with only numeric or non-numeric summaries if they are sufficiently complex (at Dr. Dowling's discretion)
 
         -   [x ] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
         some in qmd for this projects and some in data qmd
 
@@ -284,7 +291,7 @@ final_data_cleaning.rmd file has this infomation
     - NOTE: This objective may be met with only numeric or factor data analyses if they are sufficiently complex (at Dr. Dowling's discretion)
 
         -   [ x] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
         some in qmd for this projects and some in data qmd file
 
@@ -296,7 +303,7 @@ final_data_cleaning.rmd file has this infomation
     4. Uses dynamic inline R code to render data-dependent text
 
         -   [x ] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
 
 ### BibTeX
@@ -308,7 +315,7 @@ final_data_cleaning.rmd file has this infomation
     3. May use `cite_r()` to cite R and R packages
 
         -   [ x] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
 
 21. Render an APA7 references page from a .bib file
@@ -320,8 +327,9 @@ final_data_cleaning.rmd file has this infomation
     5. May include references not cited in-text
 
         -   [ x] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
+            - add \clearpage before section to start on new page
 
 ### Notebooks and code chunks
 
@@ -333,8 +341,10 @@ final_data_cleaning.rmd file has this infomation
     4.  Chunks are distributed throughout the manuscript, sensibly placed near the text they support
 
         -   [x ] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments: 
+            - great commenting!
+            - be sure you stick to comment-style chunk options, you've got a few that mix header and comment styles
         
 23. Use code chunks to set up a quarto document
 
@@ -344,7 +354,7 @@ final_data_cleaning.rmd file has this infomation
     4. Organizes setup chunks sensibly
 
         -   [x ] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
         
 24. Render publication-quality tables, figures, and images from code chunks
@@ -359,6 +369,10 @@ final_data_cleaning.rmd file has this infomation
         -   [x ] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
+            - Don't duplicate titles (only use fig-cap, not ggplot title)
+            - No generated table in the qmd (though the pandoc table is great!)
+            - Don't add styling to the cross-references (ie not bold)
+            
 
 25. Execute descriptive and inferential analyses in code chunks
 
@@ -369,7 +383,7 @@ final_data_cleaning.rmd file has this infomation
     5. Chunks are organized sensibly and appear near the text they support
 
         -   [x ] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
 
 ### R Markdown and Quarto
@@ -379,8 +393,9 @@ final_data_cleaning.rmd file has this infomation
     1. Includes all necessary metadata, output options, and formatting options necessary to render an APA styled document (or other specified style if appropriate for the project)
 
         -   [ x] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
+            - no need to put your shorttitle in caps, apaquarto will style it for you
         
 27. Use quarto R Markdown to compose an academic manuscript
 
@@ -391,8 +406,8 @@ final_data_cleaning.rmd file has this infomation
     - NOTE: This is going to be one of the most flexible objectives to demonstrate.  You need to demonstrate a range of markdown skills and use them to make a readable, informative manuscript. Hitting the four points above should do that, but you can use your judgment about what kind of markdown features will best serve your project. No matter what, you should use markdown to follow APA7 guidelines.
 
         -   [ x] Objective attempt
-        -   [ ] Objective met
-        -   Grader comments:
+        -   [x] Objective met
+        -   Grader comments: pandoc tables are awesome!
 
 28. Use inline R variables to replace static text
 
@@ -401,7 +416,7 @@ final_data_cleaning.rmd file has this infomation
     3. Ideally, uses inline R references for *all* data-dependent text
 
         -   [ x] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
 
 29. Run inline R functions to render dynamic data-dependent text
@@ -409,7 +424,7 @@ final_data_cleaning.rmd file has this infomation
     1. Uses inline R functions to render at least 3 unique data-dependent text outputs (e.g., performs rounding, calculates means, subtracts one list length from another, etc. -- inline rather than in a code chunk)
 
         -   [x ] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:
         
 30. Use `knitr` and quarto to produce an APA7 formatted 1-click PDF manuscript
@@ -420,7 +435,7 @@ final_data_cleaning.rmd file has this infomation
     4. No additional steps are needed (e.g., finding data, determining necessary packages to install and load, running unsourced scripts, correcting aboslute paths)
 
         -   [ x] Objective attempt
-        -   [ ] Objective met
+        -   [x] Objective met
         -   Grader comments:        
    
 
@@ -448,8 +463,8 @@ Given the the fact that i had to start my project from pretty much Zero i only w
 
 All final projects are graded by Dr. Dowling. You will see your grade on Canvas separated into two categories: objective points and engagement points.
 
--   **Objective points:** #/30
--   **Engagement points:** #/10
--   **Total points:** #/40
+-   **Objective points:** 26/30
+-   **Engagement points:** 10/10
+-   **Total points:** 36/40
 
-**Comments:**
+**Comments:** Wow, Karen! You really pulled this together in the end. I'm so impressed with your ability to recover from the data loss and get things back to such a strong state. If this is what you can produce in just a few crazy days, I'm excited what you'll be able to do with more time and less chaos. I hope you're proud of everything you've accomplished this quarter. Great work!
