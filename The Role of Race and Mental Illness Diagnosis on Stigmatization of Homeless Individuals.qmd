@@ -410,6 +410,8 @@ ggplot(anova_results, aes(x = Predictor, y = F_Value, fill = Predictor)) +
 #| apa-note: The plot shows mean social distance stigma scores by diagnosis, with error bars representing standard deviation.
 #| #| echo: FALSE
 #| fig.pos: "H"
+#| #| fig-width: 7
+#| fig-height: 5
 
 # data for plotting
 data <- tibble(
@@ -451,6 +453,8 @@ A Pearson correlation test was conducted to examine the relationship between soc
 #| echo: FALSE
 #| results: "hide"
 #| fig.pos: "H"
+#| #| fig-width: 7
+#| fig-height: 5
 
 # Load necessary libraries
 library(ggplot2)
@@ -492,6 +496,8 @@ print(plot)
 #| echo: FALSE
 #| results: "hide"
 #| fig.pos: "H"
+#| fig-width: 7
+#| fig-height: 5
 
 # Load necessary libraries
 library(ggplot2)
@@ -542,6 +548,31 @@ plot <- ggplot(df_clean, aes(x = Age_of_Participant, y = Mean_Help_Offering)) +
 # Print the plot
 print(plot)
 ```
+
+```{r,echo=TRUE,include=FALSE}
+# Load necessary libraries
+library(dplyr)
+
+# Load the data
+df <- read.csv("Data_Stigmatization_of HomelessIndividuals/cleaned_stigma_data.csv")
+
+# Clean the data (handle NAs)
+df_clean <- df %>%
+  drop_na(Age_of_Participant, Mean_Help_Offering)  # Ensure no NAs in important variables
+
+# Perform the correlation test
+cor_test_result <- cor.test(df_clean$Age_of_Participant, df_clean$Mean_Help_Offering)
+
+# Print the p-value
+cor_test_result$p.value
+
+```
+
+Finally, we conducted a correlation analysis to examine the relationship between participants' age and their mean help offering. The Pearson correlation coefficient between age and mean help offering was `r round(correlation_result, 2)`, quantifying the strength and direction of this relationship in this case a negative relationship.
+
+The results indicated a significant correlation, r = `r round(correlation_result, 2)`, *p* = `r signif(cor_test_result$p.value, 3)`, suggesting that age is meaningfully associated with help offering.
+**@fig-correlation-age-and-mean-help** shows the relationship between participants' age and their mean help offering, with a regression line indicating the trend. The red line represents the mean help offering, while the blue line shows the direction of the correlation.
+
 
 # Discussion
 This study explored how race and mental illness diagnosis impact the stigmatization of homeless individuals, specifically focusing on social distance. The results revealed that race did not significantly affect social distance stigma, suggesting that race was not a key factor in determining social distance in this context. However, the diagnosis of mental illness had a significant impact on social distance. Individuals with schizophrenia and substance use disorder were perceived as more socially distant than those with no diagnosis, supporting the hypothesis that mental illness contributes to higher levels of social distance stigma.
