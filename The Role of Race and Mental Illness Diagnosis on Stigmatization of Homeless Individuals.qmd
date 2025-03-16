@@ -78,7 +78,7 @@ conflicts_prefer(dplyr::filter, .quiet = TRUE)
 conflicts_prefer(flextable::separate_header, .quiet = TRUE)
 
 ```
-Homelessness in the United States and the struggle to give individuals adequate housing is a persistent problem. Before the Covid -19 pandemic, the number of homeless individuals was on the rise with 568,000 individuals experiencing homelessness in 2019, an increase of 15,000 from the previous year[@frostHomelessnessWasRise2020]. With the current Covid-19 pandemic, we can only predict that those numbers have continued to increase. In the United States, 2.4% of homeless individuals die each year (Stasha, 2020). We know that the general population often tries to distance itself from the stigmatized population, more specifically the homeless population. Homeless individuals face greater stigma and social isolation and often are removed from public parks and other locations because the general public does not want them too close. The problems caused by stigmatization, such as social distancing, can affect the homeless population in terms of resources that they have available such as sanitation centers, employment, and social support. Often the homeless population lacks resources and is exposed to the elements which can increase their mortality, as well as the chance of being malnourished, having parasitic infestations, periodontal disease, degenerative joint diseases, venereal diseases, cirrhosis, and hepatitis-related to intravenous (IV) drug abuse. Public attitudes toward homeless individuals can influence policies and the services provided to this population. The attitudes displayed through the stigma of homeless individuals can have an impact on both physical and psychological health and willingness to access services. The impact of these stigmas has shown to have serious implications on the well-being of homeless individuals. The present study examined factors that could predict levels of stigmatization expressed towards homeless individuals. 
+Homelessness in the United States and the struggle to give individuals adequate housing is a persistent problem. Before the Covid -19 pandemic, the number of homeless individuals was on the rise with 568,000 individuals experiencing homelessness in 2019, an increase of 15,000 from the previous year[@frostHomelessnessWasRise2020]^[@frostHomelessnessWasRise2020 provided information for the number of homeless individuals during the COVID 19 pandemic a more current report can be found at https://www.statista.com/statistics/727847/homelessness-rate-in-the-us-by-state/]. With the current Covid-19 pandemic, we can only predict that those numbers have continued to increase. In the United States, 2.4% of homeless individuals die each year (Stasha, 2020). We know that the general population often tries to distance itself from the stigmatized population, more specifically the homeless population. Homeless individuals face greater stigma and social isolation and often are removed from public parks and other locations because the general public does not want them too close. The problems caused by stigmatization, such as social distancing, can affect the homeless population in terms of resources that they have available such as sanitation centers, employment, and social support. Often the homeless population lacks resources and is exposed to the elements which can increase their mortality, as well as the chance of being malnourished, having parasitic infestations, periodontal disease, degenerative joint diseases, venereal diseases, cirrhosis, and hepatitis-related to intravenous (IV) drug abuse. Public attitudes toward homeless individuals can influence policies and the services provided to this population. The attitudes displayed through the stigma of homeless individuals can have an impact on both physical and psychological health and willingness to access services. The impact of these stigmas has shown to have serious implications on the well-being of homeless individuals. The present study examined factors that could predict levels of stigmatization expressed towards homeless individuals. 
 
 ## Literature review 
 
@@ -90,7 +90,7 @@ Building on this, @markowitzRaceGenderHomelessness2021 investigated race and gen
 
 Similarly, @gattisPerceivedRacialSexual2016 linked racial stigma and discrimination to heightened depression among 89 black adolescents and young adults experiencing homelessness. Using social and minority stress models, the study highlighted how marginalized groups face greater psychological distress due to limited societal support. Though constrained by a small sample, it reinforced the role of racial stigma in homelessness experiences.
 
-In sum, stigma related to homelessness, mental illness, and race profoundly affects psychological and physical health, social integration, and resource access. The present study expands on this research by examining how mental illness and race interact to shape stigma, offering a more nuanced understanding of its impact on homeless individuals
+In sum, stigma related to homelessness, mental illness, and race profoundly affects psychological and physical health, social integration, and resource access. The present study expands on this research by examining how mental illness and race interact to shape stigma, offering a more nuanced understanding of its impact on homeless individuals 
 
 ## Current Study
 Building on the research by @corriganPublicStigmaMental2009, @markowitzRaceGenderHomelessness2021, and @weiszStigmatizedIdentitiesPsychological2018 the current study aimed to explore how race and mental illness diagnosis impact the stigmatization of homeless individuals. The research specifically focused on mental illness, distinguishing between individuals with schizophrenia and those with substance use disorders, and examined how these factors interact with race in shaping stigma. Previous studies suggest that public stigma varies across mental health conditions and that race plays a crucial role in determining the intensity of stigma. Based on these findings, the present study hypothesized that race would significantly influence social distance, perceived danger, blameworthiness, and emotional responses (concern and help) toward homeless individuals. Specifically, it was predicted that black homeless individuals would experience greater social distance, be perceived as more dangerous and more blameworthy, and receive less concern and help compared to their white counterparts. Additionally, it was anticipated that individuals with substance use disorders would face higher levels of social distance, dangerousness, and blame, while individuals with schizophrenia would receive more concern and help. Lastly, the study predicted that race and mental illness diagnosis would interact to influence all aspects of stigmatization.
@@ -340,7 +340,7 @@ We ran some summary statistics for the sample focusing on it was inprtant for us
 In addtion we ran summary statistics for the variable of social dictance that will be focused in this analysis.For Distance_mean , the minimum value was `r distance_min`, the first quartile was `r distance_1st_quartile`, the median was `r distance_median`, the mean was `r distance_mean`, the third quartile was `r distance_3rd_quartile`, and the maximum was `r distance_max`.The results for this variable are presented in the following section in which an ANOVA was conduected to examine if there were any significant main effects or interactions between race and mental illness diagnosis on social distance stigma.
 
 ## Social Distance Stigma
-The ANOVA results show that the main effect of diagnosis on social distance stigma showed a significant effect of diagnosis on social distance stigma, F(1, 211) = `r round(40.31, 2)`, p < .001. However, there was no significant interaction between race and diagnosis on social distance stigma, F(1, 211) = `r round(0.87, 2)`, p = `r round(0.512, 3)`. Similarly, the main effect of race on social distance stigma did not reach significance, F(1, 211) = `r round(0.07, 2)`, p = `r round(0.850, 3)`. **Figure 1** shows the F-values for the main effects and interaction.
+The ANOVA results show that the main effect of diagnosis on social distance stigma showed a significant effect of diagnosis on social distance stigma, F(1, 211) = `r round(40.31, 2)`, p < .001. However, there was no significant interaction between race and diagnosis on social distance stigma, F(1, 211) = `r round(0.87, 2)`, p = `r round(0.512, 3)`. Similarly, the main effect of race on social distance stigma did not reach significance, F(1, 211) = `r round(0.07, 2)`, p = `r round(0.850, 3)`. **@fig-anova-result** shows the F-values for the main effects and interaction.
 
 ```{r}
 #| label: anova-analysis
@@ -425,9 +425,63 @@ ggplot(data, aes(x = diagnosis, y = mean_stigma, fill = diagnosis)) +
   theme_minimal(base_size = 10)
 ```
 
-**Figure 2** shows the effect of mental illness diagnosis on social distance stigma. The mean stigma scores for each diagnosis are as follows:No Diagnosis: `r data$mean_stigma[1]` (SD = `r data$sd_stigma[1]`), Schizophrenia: `r data$mean_stigma[2]` (SD = `r data$sd_stigma[2]`),Substance Use Disorder: `r data$mean_stigma[3]` (SD = `r data$sd_stigma[3]`)
+**@fig-social-distance-stigma** shows the effect of mental illness diagnosis on social distance stigma. The mean stigma scores for each diagnosis are as follows:No Diagnosis: `r data$mean_stigma[1]` (SD = `r data$sd_stigma[1]`), Schizophrenia: `r data$mean_stigma[2]` (SD = `r data$sd_stigma[2]`),Substance Use Disorder: `r data$mean_stigma[3]` (SD = `r data$sd_stigma[3]`)
 
 The results indicate that individuals with schizophrenia (M = `r data$mean_stigma[2]`) and substance use disorder (M = `r data$mean_stigma[3]`) experience higher levels of social distance stigma compared to those with no diagnosis (M = `r data$mean_stigma[1]`). These differences were statistically significant.
+
+### Correlations
+The correlational analysis conducted in this section are to guide where future research should focus given that there could be other factors that are influencing the stigmatization of homeless individuals.
+```{r,echo=TRUE,include=FALSE}
+#| label: correlation-analysis
+# Load necessary library
+library(dplyr)
+#Read the dataset
+df <- read.csv("Data_Stigmatization_of HomelessIndividuals/cleaned_stigma_data.csv") # using the cleaned data set 
+
+# Perform Pearson correlation test
+cor.test(df$Social_Desirability_Bias, df$Mean_Help_Offering, method = "pearson")# both are numeric data
+```
+A Pearson correlation test was conducted to examine the relationship between social desirability bias and mean help offering. The results showed a significant negative correlation between social desirability bias and mean help offering, r = `r round(-0.28, 2)`, p < .001, indicating that participants with higher social desirability bias were less likely to offer help to homeless individuals.@fig-correlation-analysis-help-and-social-desirability shows the relationship between social desirability bias and mean help offering, with a regression line indicating the trend.
+```{r}
+#| label: fig-correlation-analysis-help-and-social-desirability
+#| fig-cap: Correlation between social desirability bias and mean help offering
+#| apa-note: The plot shows the relationship between social desirability bias and mean help offering, with a regression line indicating the trend.
+#| echo: FALSE
+#| results: "hide"
+#| fig.pos: "H"
+
+# Load necessary libraries
+library(ggplot2)
+
+# Load the data
+df <- read.csv("Data_Stigmatization_of HomelessIndividuals/cleaned_stigma_data.csv")
+
+# Fit the linear model
+model <- lm(Mean_Help_Offering ~ Social_Desirability_Bias, data = df)
+
+# color gradient and direction of correlation line
+plot <- ggplot(df, aes(x = Social_Desirability_Bias, y = Mean_Help_Offering, color = Social_Desirability_Bias)) +
+  geom_point(size = 3) +  #  point size
+  # Conditionally remove geom_smooth based on whether it's being rendered
+  {if (knitr::is_html_output()) geom_smooth(method = "lm", se = FALSE, color = "red")} +  # Red regression line 
+  geom_abline(intercept = coef(model)[1], slope = coef(model)[2], color = "blue", linewidth = 1) +  # Line showing correlation direction
+  scale_color_gradient(low = "lightblue", high = "darkblue") +  # Gradient from light blue to dark blue
+  labs(
+    title = "Social Desirability Bias and Mean Help Offering",
+    x = "Social Desirability Bias",
+    y = "Mean Help Offering"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 12, face = "bold", hjust = 0.5),
+    axis.title = element_text(size = 10, face = "bold"),
+    axis.text = element_text(size = 9)
+  )
+
+# Print plot
+print(plot)
+
+```
 
 # Discussion
 This study explored how race and mental illness diagnosis impact the stigmatization of homeless individuals, specifically focusing on social distance. The results revealed that race did not significantly affect social distance stigma, suggesting that race was not a key factor in determining social distance in this context. However, the diagnosis of mental illness had a significant impact on social distance. Individuals with schizophrenia and substance use disorder were perceived as more socially distant than those with no diagnosis, supporting the hypothesis that mental illness contributes to higher levels of social distance stigma.
