@@ -441,7 +441,7 @@ df <- read.csv("Data_Stigmatization_of HomelessIndividuals/cleaned_stigma_data.c
 # Perform Pearson correlation test
 cor.test(df$Social_Desirability_Bias, df$Mean_Help_Offering, method = "pearson")# both are numeric data
 ```
-A Pearson correlation test was conducted to examine the relationship between social desirability bias and mean help offering. The results showed a significant negative correlation between social desirability bias and mean help offering, r = `r round(-0.28, 2)`, p < .001, indicating that participants with higher social desirability bias were less likely to offer help to homeless individuals.@fig-correlation-analysis-help-and-social-desirability shows the relationship between social desirability bias and mean help offering, with a regression line indicating the trend.
+A Pearson correlation test was conducted to examine the relationship between social desirability bias and mean help offering. The results showed a significant negative correlation between social desirability bias and mean help offering, r = `r round(-0.28, 2)`, p < .001, indicating that participants with higher social desirability bias were less likely to offer help to homeless individuals.**@fig-correlation-analysis-help-and-social-desirability** shows the relationship between social desirability bias and mean help offering, with a regression line indicating the trend.
 ```{r}
 #| label: fig-correlation-analysis-help-and-social-desirability
 #| fig-cap: Correlation between social desirability bias and mean help offering
