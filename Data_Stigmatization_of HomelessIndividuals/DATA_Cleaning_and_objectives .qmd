@@ -496,9 +496,6 @@ bar_plot <- ggplot(data_means) +
 # Print the bar plot
 print(bar_plot)
 
-# Save the plot as a PNG image with APA style (high resolution for publication)
-ggsave("ethnicity_vs_mean_scores_ggplot.png", plot = bar_plot, dpi = 300, width = 8, height = 6)
-
 ```
 
 
@@ -612,7 +609,7 @@ prop_table |>
 
 ```
 
-
+I could not get the tbl- format in my final paper it would not render correctly so i used the other foramt given in the  apa quartp extension for my tables the plots did work. 
 # more work with data
 
 ```{r}
