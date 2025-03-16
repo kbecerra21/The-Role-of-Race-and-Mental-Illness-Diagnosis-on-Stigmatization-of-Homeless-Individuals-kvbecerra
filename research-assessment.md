@@ -283,7 +283,7 @@ final_data_cleaning.rmd file has this infomation
     3. Presents results in narrative text, table, or plot
     - NOTE: This objective may be met with only numeric or factor data analyses if they are sufficiently complex (at Dr. Dowling's discretion)
 
-        -   [ ] Objective attempt
+        -   [ x] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         some in qmd for this projects and some in data qmd file
@@ -408,7 +408,7 @@ final_data_cleaning.rmd file has this infomation
 
     1. Uses inline R functions to render at least 3 unique data-dependent text outputs (e.g., performs rounding, calculates means, subtracts one list length from another, etc. -- inline rather than in a code chunk)
 
-        -   [ ] Objective attempt
+        -   [x ] Objective attempt
         -   [ ] Objective met
         -   Grader comments:
         
