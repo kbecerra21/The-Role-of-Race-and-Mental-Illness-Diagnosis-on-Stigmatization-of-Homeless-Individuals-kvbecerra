@@ -367,6 +367,8 @@ summary(anova_results)
 #| apa-note: The plot shows F-values for each predictor in the ANOVA model. Higher F-values indicate a stronger effect on the dependent variable.
 #| #| echo: FALSE
 #| fig.pos: "H"
+#| fig-width: 7
+#| fig-height: 5
 
 # Load necessary libraries
 library(ggplot2)
