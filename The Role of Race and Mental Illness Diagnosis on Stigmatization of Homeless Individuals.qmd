@@ -428,13 +428,11 @@ ggplot(data, aes(x = diagnosis, y = mean_stigma, fill = diagnosis)) +
        title = "Impact of Mental Illness Diagnosis on Social Distance Stigma") +
   theme_minimal(base_size = 10)
 ```
-
 **@fig-social-distance-stigma** shows the effect of mental illness diagnosis on social distance stigma. The mean stigma scores for each diagnosis are as follows:No Diagnosis: `r data$mean_stigma[1]` (SD = `r data$sd_stigma[1]`), Schizophrenia: `r data$mean_stigma[2]` (SD = `r data$sd_stigma[2]`),Substance Use Disorder: `r data$mean_stigma[3]` (SD = `r data$sd_stigma[3]`)
 
 The results indicate that individuals with schizophrenia (M = `r data$mean_stigma[2]`) and substance use disorder (M = `r data$mean_stigma[3]`) experience higher levels of social distance stigma compared to those with no diagnosis (M = `r data$mean_stigma[1]`). These differences were statistically significant.
 
 ### Correlations
-The correlational analysis conducted in this section are to guide where future research should focus given that there could be other factors that are influencing the stigmatization of homeless individuals.
 ```{r,echo=TRUE,include=FALSE}
 #| label: correlation-analysis
 # Load necessary library
@@ -445,7 +443,7 @@ df <- read.csv("Data_Stigmatization_of HomelessIndividuals/cleaned_stigma_data.c
 # Perform Pearson correlation test
 cor.test(df$Social_Desirability_Bias, df$Mean_Help_Offering, method = "pearson")# both are numeric data
 ```
-A Pearson correlation test was conducted to examine the relationship between social desirability bias and mean help offering. The results showed a significant negative correlation between social desirability bias and mean help offering, r = `r round(-0.28, 2)`, p < .001, indicating that participants with higher social desirability bias were less likely to offer help to homeless individuals.**@fig-correlation-analysis-help-and-social-desirability** shows the relationship between social desirability bias and mean help offering, with a regression line indicating the trend.
+
 ```{r}
 #| label: fig-correlation-analysis-help-and-social-desirability
 #| fig-cap: Correlation between social desirability bias and mean help offering
@@ -488,7 +486,9 @@ plot <- ggplot(df, aes(x = Social_Desirability_Bias, y = Mean_Help_Offering, col
 print(plot)
 
 ```
+The correlational analysis conducted in this section are to guide where future research should focus given that there could be other factors that are influencing the stigmatization of homeless individuals.
 
+A Pearson correlation test was conducted to examine the relationship between social desirability bias and mean help offering. The results showed a significant negative correlation between social desirability bias and mean help offering, r = `r round(-0.28, 2)`, p < .001, indicating that participants with higher social desirability bias were less likely to offer help to homeless individuals.**@fig-correlation-analysis-help-and-social-desirability** shows the relationship between social desirability bias and mean help offering, with a regression line indicating the trend.
 ```{r}
 #| label: fig-correlation-age-and-mean-help
 #| fig-cap: Correlation between age of participants and mean help offering
@@ -567,7 +567,6 @@ cor_test_result <- cor.test(df_clean$Age_of_Participant, df_clean$Mean_Help_Offe
 cor_test_result$p.value
 
 ```
-
 Finally, we conducted a correlation analysis to examine the relationship between participants' age and their mean help offering. The Pearson correlation coefficient between age and mean help offering was `r round(correlation_result, 2)`, quantifying the strength and direction of this relationship in this case a negative relationship.
 
 The results indicated a significant correlation, r = `r round(correlation_result, 2)`, *p* = `r signif(cor_test_result$p.value, 3)`, suggesting that age is meaningfully associated with help offering.
