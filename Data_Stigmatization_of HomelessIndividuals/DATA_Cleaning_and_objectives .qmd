@@ -326,7 +326,7 @@ str(messy.stigma_cleaned)
 
 ```
 
-# Data Analysis futher steps 
+# Data Analysis futher steps- this would be used for the data analysis section of the paper if proffessor wanted to look at how particpant demographics effected the intial results 
 ```{r}
 # Load necessary libraries
 library(dplyr)
@@ -444,16 +444,283 @@ plot(anova_Mean_PD)
 plot(anova_Mean_Concern)
 ```
 
-# R Markdown
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r}
+# Load necessary libraries
+library(ggplot2)
 library(dplyr)
+library(RColorBrewer)
+
+# Load the dataset
+data <- read.csv("Data_Stigmatization_of HomelessIndividuals/cleaned_stigma_data.csv")
+
+# Convert relevant variables to factors
+data <- data %>%
+  mutate(
+    Ethnicity_Participant = factor(Ethnicity_Participant, 
+                                    levels = c("White", "Hispanic", "Black", "Asian American", "Biracial", "Other"),
+                                    labels = c("White", "Hispanic", "Black", "Asian American", "Biracial", "Other")),
+    Gender_Participant = as.factor(Gender_Participant)
+  )
+
+# Gather the columns for the various measures into a long format
+data_long <- data %>%
+  gather(key = "Measure", value = "Score", 
+         Social_Distance_Score_1, Blame_Attribution_1, Perceived_Danger_1, Concern_About_Impact_1, Help_Offering_1)
+
+# Calculate mean for each measure and ethnicity
+data_means <- data_long %>%
+  group_by(Ethnicity_Participant, Measure) %>%
+  summarize(Mean_Score = mean(Score, na.rm = TRUE))
+
+# Create the ggplot bar graph
+bar_plot <- ggplot(data_means) +
+  geom_bar(aes(x = Ethnicity_Participant, y = Mean_Score, fill = Ethnicity_Participant), 
+           stat = "identity", position = "dodge") +
+  facet_wrap(~ Measure, scales = "free_y") +
+  labs(
+    title = "Ethnicity vs Mean Scores for Various Measures",
+    x = "Ethnicity of Participant",
+    y = "Mean Scores"
+  ) +
+  theme_minimal(base_size = 14) + # Increase base size for readability
+  scale_fill_brewer(palette = "Set3") + # Colorful palette
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    axis.title = element_text(face = "bold"), # Bold axis titles
+    plot.title = element_text(face = "bold", size = 16, hjust = 0.5), # Bold title, centered
+    strip.text = element_text(face = "bold"), # Bold facet labels
+    legend.title = element_text(face = "bold"),
+    legend.text = element_text(size = 12)
+  )
+
+# Print the bar plot
+print(bar_plot)
+
+# Save the plot as a PNG image with APA style (high resolution for publication)
+ggsave("ethnicity_vs_mean_scores_ggplot.png", plot = bar_plot, dpi = 300, width = 8, height = 6)
+
+```
+
+
+
+# correlation analysis
+
+```{r,echo=TRUE,include=FALSE}
+#| label: correlation-analysis
+# Load necessary library
+library(dplyr)
+#Read the dataset
+df <- read.csv("Data_Stigmatization_of HomelessIndividuals/cleaned_stigma_data.csv") # using the cleaned data set 
+
+# Perform Pearson correlation test
+cor.test(df$Social_Desirability_Bias, df$Mean_Help_Offering, method = "pearson")# both are numeric data
+```
+
+``` {r, echo=TRUE, include=True, results='asis'}
+#| label: tbl-correlation-analysis-results
+#| tbl-cap: Pearson Correlation Between Social Desirability Bias and Mean Help Offering
+#| apa-note: The table presents the Pearson correlation test results, including the correlation coefficient, t-value, degrees of freedom, p-value, and confidence interval.
+
+# Load necessary library
+library(dplyr)
+
+# Load the data
+df <- read.csv("Data_Stigmatization_of HomelessIndividuals/cleaned_stigma_data.csv") # using the cleaned data set 
+
+# tibble with the correlation results based on the provided values
+cor_table <- tibble(
+  Statistic = c("Correlation (r)", "t-value", "Degrees of Freedom", "p-value", "95% CI (Lower)", "95% CI (Upper)"),
+  Value = c(
+    round(-0.2752258, 3),  # Correlation
+    round(-4.0688, 3),     # t-value
+    202,                   # Degrees of Freedom
+    format.pval(6.774e-05, digits = 3, eps = .001),  # p-value
+    round(-0.3975658, 3),  # Lower bound of 95% CI
+    round(-0.1432715, 3)   # Upper bound of 95% CI
+  )
+)
+
+# Print the table
+print(cor_table)
 
 ```
 
 ```{r}
-anova_SD1 <- aov(Social_Distance_Score_1 ~ Ethnicity_Participant, data = data)
-summary(anova_SD1)
+#| label: scatter-plot-correlation
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+
+# Load the cleaned data set
+df <- read.csv("Data_Stigmatization_of HomelessIndividuals/cleaned_stigma_data.csv")
+
+# Scatter Plot 
+scatter_plot <- ggplot(df, aes(x = Social_Desirability_Bias, y = Mean_Help_Offering)) +
+  geom_point(color = "blue") + 
+  labs(title = "Scatter Plot: Social Desirability Bias vs Mean Help Offering",
+       x = "Social Desirability Bias", 
+       y = "Mean Help Offering") +
+  theme_minimal()
+
+# Print the scatter plot
+
+print(scatter_plot)
+
 
 ```
+
+# this help me build the scatter plot in the final paper. i did add more layers and made it better in final project 
+
+# Participant demographics- what would have be
+you can see the table in viewer in which 53% of sample identify as liberal 
+
+```{r}
+## Political affiliation 
+#| label: tbl-political-affiliation
+#| tbl-cap: Proportions of Political Affiliation Across Experimental Conditions.
+#| apa-note: The table shows the proportions of participants' political affiliation across the experimental conditions. The total sample size is 215. Conditions can be found in the Measures section of the paper.
+
+library(dplyr)
+library(flextable)
+
+# Load the data
+df <- read.csv("Data_Stigmatization_of HomelessIndividuals/cleaned_stigma_data.csv")
+
+# Convert relevant columns to factors
+df$Political_Affiliation <- as.factor(df$Political_Affiliation)
+
+# Calculate the total sample size
+total_sample_size <- nrow(df)
+
+# Create the proportion table for Political Affiliation
+prop_table <- df %>%
+  group_by(Political_Affiliation) %>%
+  summarise(
+    Proportion = n() / total_sample_size,
+    .groups = "drop"
+  )
+
+# Add custom row names for political affiliation categories
+prop_table$Political_Affiliation <- factor(prop_table$Political_Affiliation, 
+                                           levels = c("1", "2", "3"), 
+                                           labels = c("Liberal", "Moderate", "Conservative"))
+
+# Display the table using flextable
+prop_table |>
+  flextable::flextable() |>
+  flextable::theme_apa()
+
+```
+
+
+# more work with data
+
+```{r}
+# Install and load necessary libraries for data manipulation
+# Uncomment if the packages are already installed- you do not need to install them again
+# install.packages("tidyverse")
+# install.packages("readr")
+# install.packages("stringr")
+# install.packages("forcats")
+
+# Load the packages
+library(tidyverse)  # package for data manipulation 
+library(readr)      # For reading data
+library(stringr)    # For string manipulation
+library(forcats)    # For working with factors
+
+# Function to calculate mean social distance score within the scale of 1-7. This is because the scale only goes up to 7
+calculate_mean_score <- function(x, y, z) {
+  mean_score <- mean(c(x, y, z), na.rm = TRUE)  # Compute mean, ignore NA values
+  return(pmin(pmax(mean_score, 1), 7))  # score stays within the 1-7 scale
+}
+
+# Step 1: Load the original dataset and view the structure
+playstigma_data <- read_csv("Data_Stigmatization_of HomelessIndividuals/cleaned_stigma_data.csv", show_col_types = FALSE)
+
+# View first few rows of the original dataset
+head(playstigma_data)
+
+# View summary of the original dataset
+summary(playstigma_data)
+
+# Check the structure of the original dataset
+str(playstigma_data)
+
+# Step 2: Data cleaning and transformation pipeline
+play_stigma_cleaned <- playstigma_data %>%
+  
+  # Convert columns to appropriate data types
+  mutate(
+    Race_Condition = as.factor(Race_Condition),  # Convert race condition to factor
+    Diagnosis_Condition = as.factor(Diagnosis_Condition),  # Convert diagnosis condition to factor
+    Condition_Type = as.factor(Condition_Type),  # Convert condition type to factor
+    Social_Distance_Score_1 = as.numeric(Social_Distance_Score_1),  # Numeric conversion
+    Social_Distance_Score_2 = as.numeric(Social_Distance_Score_2),  # Numeric conversion
+    Social_Distance_Score_3 = as.numeric(Social_Distance_Score_3),  # Numeric conversion
+    
+    # Mean social distance score must stay within 1-7
+    Mean_Social_Distance = calculate_mean_score(Social_Distance_Score_1, Social_Distance_Score_2, Social_Distance_Score_3),
+    
+    # Recode condition levels to reflect 6 distinct conditions
+    Condition_Type = fct_recode(Condition_Type, 
+                                "Black character/No mental illness" = "1", 
+                                "Black character/Substance use disorder" = "2", 
+                                "Black character/Schizophrenia" = "3", 
+                                "White character/No mental illness" = "4", 
+                                "White character/Substance use disorder" = "5", 
+                                "White character/Schizophrenia" = "6"),
+    
+    # Group race conditions into top 3 most common categories
+    Race_Condition = fct_lump_n(Race_Condition, n = 3),
+    
+    # Categorize social distance scores into High, Medium, Low
+    Social_Distance_Category = case_when(
+      Mean_Social_Distance >= 5 ~ "High",
+      Mean_Social_Distance >= 3 & Mean_Social_Distance < 5 ~ "Medium",
+      TRUE ~ "Low"
+    ),
+    
+    # Identify whether condition is "Severe"
+    Contains_Stigma = str_detect(as.character(Condition_Type), "Severe"),
+    
+    # Normalize scores between 0 and 1 (considering 1-7 scale)
+    Normalized_Score = round((Mean_Social_Distance - 1) / 6, 2)
+  ) %>%
+  
+  # Remove rows with missing values and duplicates
+  drop_na() %>%
+  distinct()
+
+# Step 3: View the cleaned data after transformation
+# View first few rows after transformation
+head(play_stigma_cleaned)
+
+# View summary of the cleaned dataset
+summary(play_stigma_cleaned)
+
+# Check the structure of the cleaned dataset
+str(play_stigma_cleaned)
+
+# Step 4: Inspect changes made during transformation
+# Check which conditions were recoded and the frequencies of each category
+table(play_stigma_cleaned$Condition_Type)
+
+# Check the number of unique values in key columns (e.g., Race_Condition, Diagnosis_Condition)
+table(play_stigma_cleaned$Race_Condition)
+table(play_stigma_cleaned$Diagnosis_Condition)
+
+# Step 5: Check the categorization of social distance (High, Medium, Low)
+table(play_stigma_cleaned$Social_Distance_Category)
+
+# Step 6: View the normalized scores to ensure the scaling is correct
+summary(play_stigma_cleaned$Normalized_Score)
+
+# I did not want to print new data file as it was not needed for the paper if i did i would of used the write.csv function if i wanted to save it  or print function if i wanted to see it. 
+
+```
+
+
+
+
 
