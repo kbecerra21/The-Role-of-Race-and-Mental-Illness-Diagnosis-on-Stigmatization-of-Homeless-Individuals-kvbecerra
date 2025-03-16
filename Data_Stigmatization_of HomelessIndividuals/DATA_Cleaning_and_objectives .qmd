@@ -660,8 +660,79 @@ summary(play_stigma_cleaned$Normalized_Score)
 # I did not want to print new data file as it was not needed for the paper if i did i would of used the write.csv function if i wanted to save it  or print function if i wanted to see it. 
 
 ```
+# make correlation plot more complex 
+```{r}
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
 
+# Load the data
+df <- read.csv("Data_Stigmatization_of HomelessIndividuals/cleaned_stigma_data.csv")
 
+# Clean the data (handle NAs)
+df_clean <- df %>%
+  drop_na(Social_Desirability_Bias, Mean_Help_Offering, Gender_Participant)  # Ensure 'Gender_Participant' is not missing
 
+# Convert Gender_Participant to a factor with appropriate labels
+df_clean$Gender_Participant <- factor(df_clean$Gender_Participant, 
+                                      levels = c(1, 2, 3, 4), 
+                                      labels = c("Male", "Female", "Non-binary", "Other"))
 
+# Calculate summary statistics for numeric variables
+summary_stats <- df_clean %>%
+  summarise(
+    mean_help = mean(Mean_Help_Offering, na.rm = TRUE),
+    sd_help = sd(Mean_Help_Offering, na.rm = TRUE),
+    gender_count = n()
+  )
+print(summary_stats)
+
+# Create the plot 
+plot <- ggplot(df_clean, aes(x = Social_Desirability_Bias, y = Mean_Help_Offering, color = Gender_Participant)) + 
+  geom_point(size = 3, shape = 21, fill = "white") +  # appearance
+  geom_smooth(method = "lm", se = TRUE, aes(color = Gender_Participant), linetype = "dashed") +  # Add regression line with confidence interval
+  facet_wrap(~ Gender_Participant, ncol = 2) +  # Faceting by Gender_Participant
+  labs(
+    title = "Social Desirability Bias and Mean Help Offering by Gender",
+    x = "Social Desirability Bias",
+    y = "Mean Help Offering",
+    color = "Gender"
+  ) + 
+  theme_minimal(base_family = "Arial") +
+  theme(
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
+    axis.title = element_text(size = 12, face = "bold"),
+    axis.text = element_text(size = 10),
+    legend.title = element_text(size = 10),
+    legend.text = element_text(size = 8)
+  )
+
+# Print the plot
+print(plot)
+```
+there was a warming because the particpant gender is not numeric the next graph will be with all numeric varibles 
+
+# participant age and mean help offering
+```{r}
+# participants and mean help offering
+plot <- ggplot(df_clean, aes(x = Age_of_Participant, y = Mean_Help_Offering)) + 
+  geom_point(size = 3, shape = 21, fill = "white") +  #  appearance
+  geom_smooth(method = "lm", se = TRUE, linetype = "dashed") +  # Add regression line with confidence interval
+  geom_hline(yintercept = mean_help, linetype = "solid", color = "red", size = 1.2) +  # Add horizontal line for mean
+  labs(
+    title = "Age of Participants and Mean Help Offering",
+    x = "Age of Participant",
+    y = "Mean Help Offering"
+  ) + 
+  theme_minimal() +  # keep minimal
+  theme(
+    plot.title = element_text(size = 12, face = "bold", hjust = 0.5),
+    axis.title = element_text(size = 12, face = "bold"),
+    axis.text = element_text(size = 10)
+  )
+
+# Print the plot
+print(plot)
+```
+I used this to make a more complex plot in my final paper
 

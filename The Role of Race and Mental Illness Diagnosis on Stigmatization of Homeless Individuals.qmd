@@ -485,6 +485,64 @@ print(plot)
 
 ```
 
+```{r}
+#| label: fig-correlation-age-and-mean-help
+#| fig-cap: Correlation between age of participants and mean help offering
+#| apa-note: The plot shows the relationship between age of participants and mean help offering, with a regression line in blue indicating the trend.The red line is the mean. The correlation coefficient quantifies the strength and direction of this relationship.
+#| echo: FALSE
+#| results: "hide"
+#| fig.pos: "H"
+
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+
+# Load the data
+df <- read.csv("Data_Stigmatization_of HomelessIndividuals/cleaned_stigma_data.csv")
+
+# Clean the data (handle NAs)
+df_clean <- df %>%
+  drop_na(Age_of_Participant, Mean_Help_Offering)  # Ensure no NAs in important variables
+
+# Calculate the correlation between Age_of_Participant and Mean_Help_Offering
+correlation_result <- cor(df_clean$Age_of_Participant, df_clean$Mean_Help_Offering, method = "pearson")
+
+# Print the Pearson correlation coefficient
+print(paste("Pearson correlation coefficient: ", round(correlation_result, 2)))
+
+# Detailed summary with significance testing
+cor_test_result <- cor.test(df_clean$Age_of_Participant, df_clean$Mean_Help_Offering)
+
+# Print detailed results
+print(cor_test_result)
+
+# Fit a linear model
+model <- lm(Mean_Help_Offering ~ Age_of_Participant, data = df_clean)
+
+# aesthetics
+plot <- ggplot(df_clean, aes(x = Age_of_Participant, y = Mean_Help_Offering)) +
+  geom_point(size = 3) +  # Point size
+  # Conditionally add geom_smooth for HTML output
+  {if (knitr::is_html_output()) geom_smooth(method = "lm", se = FALSE, color = "red")} +  # Red regression line 
+  geom_abline(intercept = coef(model)[1], slope = coef(model)[2], color = "blue", linewidth = 1) +  # Line showing correlation direction
+  geom_hline(yintercept = mean(df_clean$Mean_Help_Offering, na.rm = TRUE), 
+             linetype = "solid", color = "red", linewidth = 1.2) +  # Add horizontal line for mean
+  labs(
+    title = "Age of Participants and Mean Help Offering",
+    x = "Age of Participant",
+    y = "Mean Help Offering"
+  ) +
+  theme_minimal() +  # Keep minimal theme
+  theme(
+    plot.title = element_text(size = 12, face = "bold", hjust = 0.5),
+    axis.title = element_text(size = 12, face = "bold"),
+    axis.text = element_text(size = 10)
+  )
+
+# Print the plot
+print(plot)
+```
+
 # Discussion
 This study explored how race and mental illness diagnosis impact the stigmatization of homeless individuals, specifically focusing on social distance. The results revealed that race did not significantly affect social distance stigma, suggesting that race was not a key factor in determining social distance in this context. However, the diagnosis of mental illness had a significant impact on social distance. Individuals with schizophrenia and substance use disorder were perceived as more socially distant than those with no diagnosis, supporting the hypothesis that mental illness contributes to higher levels of social distance stigma.
 
