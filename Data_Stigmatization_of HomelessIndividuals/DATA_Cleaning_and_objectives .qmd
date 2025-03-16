@@ -444,62 +444,6 @@ plot(anova_Mean_PD)
 plot(anova_Mean_Concern)
 ```
 
-```{r}
-# Load necessary libraries
-library(ggplot2)
-library(dplyr)
-library(RColorBrewer)
-
-# Load the dataset
-data <- read.csv("Data_Stigmatization_of HomelessIndividuals/cleaned_stigma_data.csv")
-
-# Convert relevant variables to factors
-data <- data %>%
-  mutate(
-    Ethnicity_Participant = factor(Ethnicity_Participant, 
-                                    levels = c("White", "Hispanic", "Black", "Asian American", "Biracial", "Other"),
-                                    labels = c("White", "Hispanic", "Black", "Asian American", "Biracial", "Other")),
-    Gender_Participant = as.factor(Gender_Participant)
-  )
-
-# Gather the columns for the various measures into a long format
-data_long <- data %>%
-  gather(key = "Measure", value = "Score", 
-         Social_Distance_Score_1, Blame_Attribution_1, Perceived_Danger_1, Concern_About_Impact_1, Help_Offering_1)
-
-# Calculate mean for each measure and ethnicity
-data_means <- data_long %>%
-  group_by(Ethnicity_Participant, Measure) %>%
-  summarize(Mean_Score = mean(Score, na.rm = TRUE))
-
-# Create the ggplot bar graph
-bar_plot <- ggplot(data_means) +
-  geom_bar(aes(x = Ethnicity_Participant, y = Mean_Score, fill = Ethnicity_Participant), 
-           stat = "identity", position = "dodge") +
-  facet_wrap(~ Measure, scales = "free_y") +
-  labs(
-    title = "Ethnicity vs Mean Scores for Various Measures",
-    x = "Ethnicity of Participant",
-    y = "Mean Scores"
-  ) +
-  theme_minimal(base_size = 14) + # Increase base size for readability
-  scale_fill_brewer(palette = "Set3") + # Colorful palette
-  theme(
-    axis.text.x = element_text(angle = 45, hjust = 1),
-    axis.title = element_text(face = "bold"), # Bold axis titles
-    plot.title = element_text(face = "bold", size = 16, hjust = 0.5), # Bold title, centered
-    strip.text = element_text(face = "bold"), # Bold facet labels
-    legend.title = element_text(face = "bold"),
-    legend.text = element_text(size = 12)
-  )
-
-# Print the bar plot
-print(bar_plot)
-
-```
-
-
-
 # correlation analysis
 
 ```{r,echo=TRUE,include=FALSE}
@@ -609,7 +553,7 @@ prop_table |>
 
 ```
 
-I could not get the tbl- format in my final paper it would not render correctly so i used the other foramt given in the  apa quartp extension for my tables the plots did work. 
+I could not get the tbl- format in my final paper it would not render correctly so i used the other foramt given in the  apa quarto extension for my tables the plots did work. 
 # more work with data
 
 ```{r}
